@@ -1,55 +1,41 @@
 baseURL = 'https://soulfiremage.github.io/Katiya_Starship/'
 languageCode = 'en-us'
 title = 'Katiya Starship'
-theme = 'PaperMod'
+theme = 'hugo-texify3'
+enableRobotsTXT = true
+enableGitInfo = true
+
+[pagination]
+pagerSize = 10
+
+[taxonomies]
+tags = "tags"
+categories = "categories"
 
 [permalinks]
-  posts = '/posts/:contentbasename/'
+posts = '/posts/:contentbasename/'
 
 [params]
-  env = "production"
-  description = "Katiya Starship"
-  author = "Richard Griffiths"
-  
-  [params.profileMode]
-    enabled = true
-    title = "Katiya Starship"
-    subtitle = "Welcome to Katiya Starship"
-    imageWidth = 120
-    imageHeight = 120
-    
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  
-  ShowToc = true
-  TocOpen = false
-  
-  [params.homeInfoParams]
-    Title = "Welcome"
-    Content = "Welcome to Katiya Starship"
-  
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/SoulFireMage"
+title = "Katiya Starship"
+author = "Richard Griffiths"
+description = "Katiya Starship - Mathematical adventures and chaos theory explorations"
+footnote = """
+Powered by <a class=link href=https://gohugo.io target=_blank rel=noopener>Hugo</a> | 
+Theme <a class=link href=https://github.com/michaelneuper/hugo-texify3 target=_blank rel=noopener>TeXify3</a>
+"""
+dateFormat = "2 January 2006"
+emphasisWithDots = true
+toc = true
+rootFontSize = "105%"
+math = true
+enableDuckDuckGoSearchBox = true
+numberedSubtitles = false
 
-[menu]
-  [[menu.main]]
-    name = 'Home'
-    url = '/'
-    weight = 1
-  [[menu.main]]
-    name = 'Posts'
-    url = '/posts'
-    weight = 2
-  [[menu.main]]
-    name = 'Search'
-    url = '/search'
-    weight = 3
+  [params.sharingbuttons]
+  twitter = true
+  email = true
+  linkedin = true
+  reddit = true
 
 [markup]
   [markup.goldmark]
@@ -60,5 +46,15 @@ theme = 'PaperMod'
     lineNos = true
     noClasses = false
 
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Posts'
+    url = '/posts'
+    weight = 2
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS"]
