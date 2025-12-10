@@ -44,7 +44,7 @@ jobs:
           node-version: '20'
 
       - name: Install PostCSS
-        run: npm install postcss postcss-cli autoprefixer
+        run: npm install postcss postcss-cli autoprefixer postcss-import
 
       - name: Setup Pages
         id: pages
