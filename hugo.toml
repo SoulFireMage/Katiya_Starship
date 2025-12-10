@@ -1,0 +1,64 @@
+baseURL = 'https://soulfiremage.github.io/Katiya_Starship/'
+languageCode = 'en-us'
+title = 'Katiya Starship'
+theme = 'PaperMod'
+
+[permalinks]
+  posts = '/posts/:contentbasename/'
+
+[params]
+  env = "production"
+  description = "Katiya Starship"
+  author = "Richard Griffiths"
+  
+  [params.profileMode]
+    enabled = true
+    title = "Katiya Starship"
+    subtitle = "Welcome to Katiya Starship"
+    imageWidth = 120
+    imageHeight = 120
+    
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  
+  ShowToc = true
+  TocOpen = false
+  
+  [params.homeInfoParams]
+    Title = "Welcome"
+    Content = "Welcome to Katiya Starship"
+  
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/SoulFireMage"
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Posts'
+    url = '/posts'
+    weight = 2
+  [[menu.main]]
+    name = 'Search'
+    url = '/search'
+    weight = 3
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = 'monokai'
+    lineNos = true
+    noClasses = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
