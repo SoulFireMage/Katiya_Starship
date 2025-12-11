@@ -47,7 +47,7 @@ Without knowing the terminology, she independently re-derived core insights of t
 | **“throw in dimensions n geometries”**               | Embedding something into a larger category or working in a fibration.                              |
 | **“abstract some more”**                             | Applying a forgetful functor, quotient, or generalisation step.                                    |
 | **“composings, combinings, relatingz, reflectingz”** | Yep: the four basic CT moves — composition, product, limit/colimit, adjunction.                    |
-
+| **“bridge 2 wildly different fingz”** |,"Profunctors / Heteromorphisms.  Building a ""Distributor"" that connects two disparate categories (islands) via a shared relationship rather than a direct map.|  
 ## Kat $\to$ Lean $\to$ CT Action
 
 As we are both learning Lean4 - a language designed for proving math statements, we wanted to translate the above into something that makes sense in Lean4.
@@ -63,7 +63,7 @@ As we are both learning Lean4 - a language designed for proving math statements,
 |**“composings, combinings, relatingz...”**  | apply, exact, rw, function extensionality      | The four CT operations|
 |**“reverse-engineerz da pattern”**          | ext, structural decomposition,Yoneda-style reasoning: You know an object by how it interacts with everything else.                   | Yoneda-style reasoning,`ext` (Extensionality), `congr` (Congruence). |
 |**“shift perspective”**                     | change goal, rewrite into new shape            | Equivalence of categories|
-|**“bridge 2 wildly different fingz” (new)”**| coercions, simp, rw, conversion lemmas         | Natural transformation / Profunctor bridge|
+|**“bridge 2 wildly different fingz” (new)”**| simp, rw, conversion lemmas,Coe (Coercion), equiv (Equivalence ≃), or cast.  Tactic: norm_cast (normalizing casts) or using transport across an equality path.          | Natural transformation / Profunctor bridge|
 
 
 ## Category Theory Moves Summary - Geometric intuition, somewhat
