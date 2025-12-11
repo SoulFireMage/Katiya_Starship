@@ -1,0 +1,92 @@
+// Custom "Alluring Shadows" purple color scheme
+// Overrides the default gruvbox colors
+
+// Light mode - cream background with purple accents
+:root {
+  // Keep the warm cream backgrounds from gruvbox
+  --bg_h: #f9f5d7;
+  --bg: #fbf1c7;
+  --bg_s: #f2e5bc;
+  --bg1: #ebdbb2;
+  --bg2: #d5c4a1;
+  --bg3: #bdae93;
+  --bg4: #a89984;
+
+  // Keep dark text for readability
+  --fg: #282828;
+  --fg1: #3c3836;
+  --fg2: #504945;
+  --fg3: #665c54;
+  --fg4: #7c6f64;
+
+  // Purple palette - Alluring Shadows
+  --purple: #7e1e80;      // Orchid - primary purple
+  --purple-dim: #9505e3;  // Purple - brighter variant
+  
+  // Replace blue with purple tones for links
+  --blue: #9505e3;        // Purple - primary links
+  --blue-dim: #7e1e80;    // Orchid - visited/hover links
+  
+  // Accent colors with purple influence
+  --red: #9d0006;
+  --green: #79740e;
+  --yellow: #b57614;
+  --aqua: #427b58;
+  --orange: #af3a03;
+  --gray: #928374;
+
+  --red-dim: #cc2412;
+  --green-dim: #98971a;
+  --yellow-dim: #d79921;
+  --aqua-dim: #689d6a;
+  --orange-dim: #d65d0e;
+  --gray-dim: #7c6f64;
+}
+
+// Dark mode - Ebony background with vibrant purple accents
+.darkmode {
+  // Ebony-based dark backgrounds
+  --bg_h: #2d292b;        // Darker ebony
+  --bg: #3d393b;          // Ebony - main background
+  --bg_s: #4d494b;        // Lighter ebony
+  --bg1: #5d595b;         // Even lighter
+  --bg2: #6d696b;
+  --bg3: #7d797b;
+  --bg4: #8d898b;
+
+  // Light text for contrast on dark background
+  --fg: #f5f0f5;          // Soft white with slight purple tint
+  --fg1: #e5e0e5;
+  --fg2: #d5d0d5;
+  --fg3: #c5c0c5;
+  --fg4: #b5b0b5;
+
+  // Vibrant purple accents for dark mode
+  --purple: #b637fb;      // Violet - bright and vibrant
+  --purple-dim: #9505e3;  // Purple
+  
+  // Links in bright purple/violet
+  --blue: #b637fb;        // Violet - primary links (bright)
+  --blue-dim: #9505e3;    // Purple - visited/hover
+  
+  // Other accent colors adjusted for dark mode
+  --red: #fb4934;
+  --green: #b8bb26;
+  --yellow: #fabd2f;
+  --aqua: #8ec07c;
+  --gray: #928374;
+  --orange: #fe8019;
+
+  --red-dim: #cc2412;
+  --green-dim: #98971a;
+  --yellow-dim: #d79921;
+  --aqua-dim: #689d6a;
+  --gray-dim: #a89984;
+  --orange-dim: #d65d0e;
+}
+
+// Selection highlight in purple
+::selection {
+  background-color: #9505e3 !important;
+  color: white !important;
+}
