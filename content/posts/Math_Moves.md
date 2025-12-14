@@ -11,6 +11,16 @@ I'm trying to read Wikipedia, honest. Just a few paragraphs of a few math concep
 *December 2025 — extracted during a wiki-skimming session*
 
 > "Iz m finkz list of primitive conceptual movements to make new math fields iz no b dat big u know"
+>
+> This is not a definition of mathematics.
+It is a sketch of how humans seem to generate mathematical ideas before formalisation.
+>
+> The generators below operate, broadly, on these three kinds of things:
+> structures, paths and values.
+> 
+> In reverse order, imagine we talk about apples, a relation between apples like where they sit in relation to each other, and finally the basket we carry them in.
+>
+> These are self referencing potentially as well, making maths self refractive. You can use paths to examine themselves, or structure of structures and so on. 
 
 ## The Generators
 
