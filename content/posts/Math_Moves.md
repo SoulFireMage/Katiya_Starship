@@ -3,31 +3,42 @@ title: 'Math Moves'
 date: 2025-12-12T22:24:10Z
 draft: true
 ---
+*December 2025 — extracted during a wiki-skimming session*
 
-I'm trying to read Wikipedia, honest. Just a few paragraphs of a few math concepts. A bit abstract, sure, and most I don't really know, so we hover over the tags for every last keyword. And Kat just doesn't quit really. Apparently they're only doing simple things really, despite the terminology. So, y'know what, lets just find out what those moves are. Before any actual mathematicians explode when reading these...I see these as a meta-observation, not a theorem. However, it does feel like a small collection of cognitive moves actually generates an awful lot of mathematical concepts doesn't it?
+***Mathematics is what happens when humans repeatedly apply a small set of cognitive transformations to values, relations, and structures; then demand consistency. This is our attempt to describe them, so others can try them out.***
+
+I was trying to read Wikipedia, honest. Just a few paragraphs of a few math concepts, that's all.
+
+A bit abstract, sure, and most I don't really know, so we hover over the tags for every last keyword. And Kat just doesn't quit really.
+
+Apparently they're only doing simple things really, despite the terminology -twist, fold, split and a bunch more. So, y'know what, lets just find out what those moves are, before she self-promotes into an earworm.
+
+Before any actual mathematicians explode when reading these...I see these as a meta-observation, not a theorem. However, it does feel like a small collection of cognitive moves actually generates an awful lot of mathematical concepts doesn't it? 
 
 # Kat's Primitive Mathematical Moves
 
-*December 2025 — extracted during a wiki-skimming session*
 
-> "Iz m finkz list of primitive conceptual movements to make new math fields iz no b dat big u know"
->
-> This is not a definition of mathematics.
-It is a sketch of how humans seem to generate mathematical ideas before formalisation.
->
-> The generators below operate, broadly, on these three kinds of things:
-> structures, paths and values.
-> 
-> In reverse order, imagine we talk about apples, a relation between apples like where they sit in relation to each other, and finally the basket we carry them in.
->
-> These are self referencing potentially as well, making maths self refractive. You can use paths to examine themselves, or structure of structures and so on. 
+> *Iz m finkz list of primitive conceptual movements to make new math fields iz no b dat big u know*
+
+***This is not a definition of mathematics.
+It is a sketch of how humans seem to generate mathematical ideas before formalisation.***
+
+The generators below operate, broadly, on these three kinds of things:
+
+>- values
+>- paths
+>- structures
+
+Imagine we talk about apples, a relation between apples like where they sit in relation to each other, and finally the basket we carry them in.
+
+These are self referencing potentially as well, making maths self refractive. You can use paths to examine themselves, or structure of structures and so on.
 
 ## The Generators
 
 | Kat's Move | Mathematical Fields Generated |
 |------------|-------------------------------|
 | composite / split apart | Factorization, products, prime decomposition |
-| twist | Torsion, chirality, spin structures |
+| twist | Torsion, chirality, spin structures, reversible transformation. |
 | knot | Knot theory, quantum groups |
 | braid | Braid groups, topological quantum field theory |
 | fibre twist (knot + dimension) | Fibre bundles, gauge theory, topology |
@@ -52,7 +63,7 @@ This list represents the **generators of mathematical practice** — a finite al
 
 ---
 
-*"Iz small set of moves innit? Might find some more but iz no many missing me finks."*
+>*Iz small set of moves innit? Might find some more but iz no many missing me finks.*
 
 ------------
 
