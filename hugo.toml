@@ -56,6 +56,10 @@ numberedSubtitles = false
     name = 'Posts'
     url = '/posts'
     weight = 2
+  [[menu.main]]
+    name = 'Math Topics'
+    url = '/mathsummaries'
+    weight = 3
 
 [outputs]
 home = ["HTML", "RSS"]
