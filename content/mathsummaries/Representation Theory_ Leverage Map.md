@@ -18,7 +18,7 @@ Groups describe symmetry abstractly (rotations, permutations, etc.), but we ofte
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Representation** | A homomorphism ρ: G → GL(V), assigning each group element a matrix acting on vector space V | ρ(g) or just "V as a G-representation" |
 | **Carrier space** | The vector space V that gets acted on | dim(V) = dimension of representation |
 | **Irreducible representation (irrep)** | A representation with no proper invariant subspaces—can't be broken into smaller pieces | Often labeled by indices: ρ₁, ρ₂, ... or by quantum numbers |
@@ -46,24 +46,24 @@ Groups describe symmetry abstractly (rotations, permutations, etc.), but we ofte
 **1. Maschke's Theorem**
 > *Every representation of a finite group (over ℂ) is completely reducible—it decomposes as a direct sum of irreducibles.*
 
-**Why it matters:** You never get "stuck" with complicated representations. Everything factors into atomic pieces. This is why representation theory is tractable.
+**Importance:** You never get "stuck" with complicated representations. Everything factors into atomic pieces. This is why representation theory is tractable.
 
 **2. Schur's Lemma**
 > *Any intertwiner between irreducible representations is either zero (if they're inequivalent) or a scalar multiple of identity (if they're equivalent).*
 
-**Why it matters:** This is the rigidity theorem. It says irreps are "maximally incompatible"—you can't partially map one into another. It's why irreps are the natural basis for decomposition. Also: **any matrix that commutes with all of a group's action must be a scalar.** This constrains what neural network layers can look like if you want equivariance.
+**Importance:** This is the rigidity theorem. It says irreps are "maximally incompatible"—you can't partially map one into another. It's why irreps are the natural basis for decomposition. Also: **any matrix that commutes with all of a group's action must be a scalar.** This constrains what neural network layers can look like if you want equivariance.
 
 **3. Orthogonality of Characters**
 > *Characters of inequivalent irreps are orthogonal under the natural inner product on class functions.*
 
-**Why it matters:** Characters form an orthonormal basis. You can decompose any representation by taking inner products with irreducible characters—essentially Fourier analysis on groups.
+**Importance:** Characters form an orthonormal basis. You can decompose any representation by taking inner products with irreducible characters—essentially Fourier analysis on groups.
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Geometric Deep Learning** | Equivariant neural networks are literally representation theory: layers must be intertwiners, features live in representation spaces |
 | **Quantum Mechanics** | Particles *are* irreps of symmetry groups (Poincaré, SU(3), etc.). Spin comes from representations of SO(3)/SU(2) |
 | **Fourier Analysis** | Fourier transform = decomposition into irreps of the translation group. Spherical harmonics = irreps of SO(3) |
@@ -93,7 +93,7 @@ Groups describe symmetry abstractly (rotations, permutations, etc.), but we ofte
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | ρ: G → GL(V) | A representation (homomorphism from group to invertible matrices) |
 | GL(V), GL(n) | General linear group: all invertible linear maps V→V (or n×n matrices) |
 | χ_ρ(g) or χ_V(g) | Character: trace of ρ(g) |
@@ -125,7 +125,7 @@ This gives three 1-dimensional irreps:
 **Verification:** These are orthogonal as characters:
 $$\frac{1}{3}\sum_{k=0}^{2} \chi_{\rho_1}(k)\overline{\chi_{\rho_2}(k)} = \frac{1}{3}(1 + \omega\cdot\omega^{-2} + \omega^2\cdot\omega^{-4}) = \frac{1}{3}(1 + \omega^{-1} + \omega^{-2}) = 0$$
 
-**Why this matters:** This *is* the discrete Fourier transform for signals with period 3. The irreps *are* the Fourier basis vectors. Representation theory and signal processing are the same subject.
+**Importance:** This *is* the discrete Fourier transform for signals with period 3. The irreps *are* the Fourier basis vectors. Representation theory and signal processing are the same subject.
 
 ---
 

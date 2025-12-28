@@ -16,6 +16,7 @@ The same equation kept appearing everywhere:
 "The operator A acting on x just scales x by λ."
 
 This showed up in:
+
 - Vibrating strings (which frequencies resonate?)
 - Quantum mechanics (which energies are allowed?)
 - Stability analysis (will small perturbations grow or decay?)
@@ -33,21 +34,21 @@ Spectral theory exists because **linear operators are determined by how they str
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Linear operator** | A linear map T: V → V (or between spaces) | T, A, L |
 | **Eigenvalue** | Scalar λ where Tv = λv for some nonzero v | λ ∈ σ(T) |
 | **Eigenvector** | Nonzero v with Tv = λv | v ∈ ker(T - λI) |
 | **Spectrum** | The set of all eigenvalues (or more generally, where (T-λI) fails to be invertible) | σ(T) |
 | **Resolvent** | The operator (T - λI)⁻¹ where it exists | R(λ,T) or R_λ |
 | **Resolvent set** | Where the resolvent exists (complement of spectrum) | ρ(T) |
-| **Spectral radius** | sup{|λ| : λ ∈ σ(T)} | r(T) |
+| **Spectral radius** | sup{\|λ\| : λ ∈ σ(T)} | r(T) |
 | **Self-adjoint/Hermitian** | T* = T (equals its own adjoint) | Real eigenvalues, orthogonal eigenvectors |
 | **Compact operator** | "Almost finite-dimensional"—maps bounded sets to precompact sets | Spectrum is discrete (except maybe 0) |
 
 **In infinite dimensions, the spectrum splits:**
 
 | Type | Condition | Example |
-|------|-----------|---------|
+| ------ | ----------- | --------- |
 | **Point spectrum** (σ_p) | λ is an actual eigenvalue: ker(T-λI) ≠ {0} | Usual eigenvalues |
 | **Continuous spectrum** (σ_c) | (T-λI) injective, dense range, but not surjective | Multiplication by x on L²[0,1] |
 | **Residual spectrum** (σ_r) | (T-λI) injective, range not dense | Pathological; empty for self-adjoint |
@@ -76,9 +77,11 @@ Spectral theory exists because **linear operators are determined by how they str
 ### D. SIGNATURE THEOREMS
 
 **1. Spectral Theorem (finite-dimensional)**
+
 > *Every self-adjoint (Hermitian) matrix is unitarily diagonalizable: A = UDU*, where D is diagonal (eigenvalues) and U is unitary (eigenvectors as columns).*
 
-**Why it matters:** Self-adjoint operators have:
+**Importance:** Self-adjoint operators have:
+
 - Real eigenvalues
 - Orthogonal eigenvectors
 - Complete eigenbasis
@@ -90,7 +93,7 @@ This is why quantum observables are self-adjoint—eigenvalues are measurement o
 > *T = ∫ λ dE(λ)*
 > *where E is a projection-valued measure (spectral measure).*
 
-**Why it matters:** Even when there aren't eigenvectors (continuous spectrum), there's still a "spectral decomposition." The projection-valued measure E assigns to each Borel set S ⊆ ℝ a projection E(S) onto the "part of the space associated with eigenvalues in S."
+**Importance:** Even when there aren't eigenvectors (continuous spectrum), there's still a "spectral decomposition." The projection-valued measure E assigns to each Borel set S ⊆ ℝ a projection E(S) onto the "part of the space associated with eigenvalues in S."
 
 **Intuition:** Instead of discrete eigenvectors, you have a continuous "smear" of spectral contributions. The integral replaces the sum.
 
@@ -98,7 +101,7 @@ This is why quantum observables are self-adjoint—eigenvalues are measurement o
 > *For the Laplacian on a bounded domain Ω ⊂ ℝⁿ, the number of eigenvalues ≤ λ grows as:*
 > *N(λ) ~ C_n · Vol(Ω) · λ^{n/2}*
 
-**Why it matters:** You can "hear" the volume of a drum! The asymptotic density of eigenvalues encodes geometric information. This connects spectral theory to geometry.
+**Importance:** You can "hear" the volume of a drum! The asymptotic density of eigenvalues encodes geometric information. This connects spectral theory to geometry.
 
 **The famous question:** "Can you hear the shape of a drum?" (Kac, 1966)
 **Answer:** Not completely—there exist non-isometric domains with identical spectra. But you can hear a *lot*: dimension, volume, boundary length, curvature integrals...
@@ -106,14 +109,14 @@ This is why quantum observables are self-adjoint—eigenvalues are measurement o
 **4. Perron-Frobenius Theorem**
 > *A positive matrix (all entries > 0) has a unique largest eigenvalue, which is positive, with a positive eigenvector.*
 
-**Why it matters:** This is why PageRank works, why Markov chains converge, why population models have a dominant growth mode. Positivity forces spectral structure.
+**Importance:** This is why PageRank works, why Markov chains converge, why population models have a dominant growth mode. Positivity forces spectral structure.
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Quantum Mechanics** | Observables are self-adjoint operators. Measurement outcomes are eigenvalues. State collapse projects onto eigenspaces. The Hamiltonian's spectrum = allowed energies. |
 | **Differential Equations** | Stability of equilibria: eigenvalues with negative real part → stable. Spectral gap → convergence rate. |
 | **Graph Theory** | Graph Laplacian eigenvalues encode connectivity, expansion, mixing time, number of connected components (multiplicity of 0). |
@@ -156,7 +159,7 @@ Its spectrum always encodes "shape" information. Learning to see Laplacians ever
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | σ(T) | Spectrum of T |
 | ρ(T) | Resolvent set (complement of spectrum) |
 | σ_p, σ_c, σ_r | Point, continuous, residual spectrum |
@@ -197,11 +200,13 @@ This is a self-adjoint operator on an appropriate domain. The spectrum is *discr
 where Hₙ are Hermite polynomials.
 
 **Key observations:**
+
 - Ground state energy is ½ (not zero!)—"zero-point energy"
 - Eigenvalues are evenly spaced—harmonic!
 - Eigenfunctions form an orthonormal basis of L²(ℝ)
 
-**Why this matters:**
+**Importance:**
+
 - This exact spectrum appears in quantum field theory (photons, phonons)
 - The evenly-spaced spectrum is characteristic of oscillators
 - Ladder operators a, a† move between eigenspaces: a†ψₙ = √(n+1)ψₙ₊₁
@@ -225,6 +230,7 @@ L = D - A
 where D = diagonal matrix of degrees, A = adjacency matrix.
 
 **Properties:**
+
 - L is symmetric positive semidefinite
 - Row sums are zero, so **1** (all-ones vector) is an eigenvector with eigenvalue 0
 - Eigenvalues: 0 = λ₁ ≤ λ₂ ≤ ... ≤ λₙ
@@ -232,7 +238,7 @@ where D = diagonal matrix of degrees, A = adjacency matrix.
 **What the spectrum tells you:**
 
 | Quantity | Meaning |
-|----------|---------|
+| ---------- | --------- |
 | λ₁ = 0 | Always (for connected graphs) |
 | Multiplicity of 0 | Number of connected components! |
 | λ₂ (Fiedler value) | "Algebraic connectivity"—how connected the graph is |
@@ -242,7 +248,8 @@ where D = diagonal matrix of degrees, A = adjacency matrix.
 
 **Spectral clustering:** Embed vertices using bottom eigenvectors of L, then cluster in that space. The spectrum knows about community structure.
 
-**Why this matters:** 
+**Importance:**S
+
 - Social network analysis
 - Image segmentation (pixels = vertices, similarity = edges)
 - Dimensionality reduction (Laplacian eigenmaps)
@@ -251,7 +258,8 @@ where D = diagonal matrix of degrees, A = adjacency matrix.
 
 ### Toward the Zeta Function
 
-You mentioned wanting to "spiral fractal the living bleep out of the zeta function to get the echoes of its spectra out of it." Here's the connection:
+``` "spiral fractal the living bleep out of the zeta function to get the echoes of its spectra out of it." ```
+Here's the connection:
 
 **The Hilbert-Pólya conjecture:**
 
@@ -278,17 +286,18 @@ It parallels the Selberg trace formula in differential geometry:
 **The "operator" for zeta:**
 
 Various candidates exist:
+
 - Transfer operators in dynamical systems
 - Operators on spaces of functions on adeles
 - Quantizations of classical Hamiltonians
 
 None have fully worked, but the spectral perspective is the most promising approach to RH.
 
-**Your intuition about "echoes of spectra":** This is exactly right. The zeros encode information about primes the way eigenvalues encode information about geometry. Extracting that information is spectral reasoning.
+**"echoes of spectra":** The zeros encode information about primes the way eigenvalues encode information about geometry. Extracting that information is spectral reasoning.
 
 ---
 
-### Leverage for your work:
+### Leverage
 
 **Convergence Thesis:** If cognitive architectures are constrained by universal principles, the "natural" operations on them (like the Laplacian measures "smoothness") will have spectra. The spectral gap determines how fast information mixes, how stable representations are, how sharply boundaries form.
 
@@ -296,8 +305,4 @@ None have fully worked, but the spectral perspective is the most promising appro
 
 **Representation theory callback:** Characters are traces, traces are sums of eigenvalues. The spectral decomposition of a representation is its decomposition into irreps.
 
-**For the zeta intuition:** If you're thinking about the zeta function spectrally, you're in good company. The zeros *behave like* eigenvalues even though we don't have the operator. The explicit formulas are trace formulas in disguise. Your "spiral fractal" instinct is reaching for some kind of renormalization group flow or multiscale decomposition—both spectral in nature.
-
----
-
-**Information Geometry** next? That's where probability distributions become a curved space, KL divergence becomes almost-a-metric, and inference becomes geometry.
+ 

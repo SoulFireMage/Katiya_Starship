@@ -18,7 +18,7 @@ This wasn't a minor glitch. Set theory was supposed to be the foundation. If the
 **The foundational programs:**
 
 | Program | Leader | Approach | Fate |
-|---------|--------|----------|------|
+| --------- | -------- | ---------- | ------ |
 | **Logicism** | Frege, Russell | Reduce math to logic | Complicated by paradoxes, type hierarchies |
 | **Formalism** | Hilbert | Math as formal symbol manipulation; prove consistency | Killed by Gödel |
 | **Intuitionism** | Brouwer | Math as mental construction; reject excluded middle | Survives as alternative foundation |
@@ -41,7 +41,7 @@ Hilbert's dream—prove mathematics consistent by finitary means—was impossibl
 **Set theory objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Set** | A collection (primitive notion in ZFC) | x, y, A, B |
 | **Element** | x ∈ A means x belongs to A | ∈ |
 | **Empty set** | The set with no elements | ∅ or {} |
@@ -53,7 +53,7 @@ Hilbert's dream—prove mathematics consistent by finitary means—was impossibl
 **The ZFC axioms:**
 
 | Axiom | What it says |
-|-------|-------------|
+| ------- | ------------- |
 | **Extensionality** | Sets with same elements are equal |
 | **Empty set** | ∅ exists |
 | **Pairing** | {a, b} exists for any a, b |
@@ -68,7 +68,7 @@ Hilbert's dream—prove mathematics consistent by finitary means—was impossibl
 **Model theory objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Language** | Symbols: constants, functions, relations | ℒ |
 | **Structure** | Domain + interpretations of symbols | 𝔐, 𝔑, (M, ...) |
 | **Theory** | Set of sentences (closed under deduction) | T |
@@ -80,7 +80,7 @@ Hilbert's dream—prove mathematics consistent by finitary means—was impossibl
 **Proof theory objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Formal system** | Language + axioms + inference rules | F, T |
 | **Proof** | Finite sequence of formulas following rules | π |
 | **Derivability** | φ is provable in T | T ⊢ φ |
@@ -91,7 +91,7 @@ Hilbert's dream—prove mathematics consistent by finitary means—was impossibl
 **Computability objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Turing machine** | Abstract computing device | M |
 | **Computable function** | Function computed by some TM | f: ℕ → ℕ |
 | **Decidable set** | Membership is computable | A is recursive |
@@ -112,7 +112,7 @@ Hilbert's dream—prove mathematics consistent by finitary means—was impossibl
 **Cardinality (set theory):**
 
 | Cardinal | What it is |
-|----------|-----------|
+| ---------- | ----------- |
 | ℵ₀ | Countable infinity (|ℕ|) |
 | 𝔠 = 2^{ℵ₀} | Continuum (|ℝ|) |
 | ℵ₁ | First uncountable cardinal |
@@ -131,7 +131,7 @@ Regular cardinals: cf(κ) = κ. Singular: cf(κ) < κ.
 **Model-theoretic invariants:**
 
 | Invariant | What it measures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Cardinality of models** | How many elements |
 | **Categoricity** | Unique model (up to isomorphism) in given cardinality |
 | **Stability** | Number of types over sets |
@@ -140,7 +140,7 @@ Regular cardinals: cf(κ) = κ. Singular: cf(κ) < κ.
 **Proof-theoretic invariants:**
 
 | Invariant | What it measures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Proof-theoretic ordinal** | Strength of a theory (which ordinals it can prove well-founded) |
 | **Consistency strength** | Where theory sits in consistency hierarchy |
 | **Speed-up** | How much stronger system shortens proofs |
@@ -148,7 +148,7 @@ Regular cardinals: cf(κ) = κ. Singular: cf(κ) < κ.
 **Computability invariants:**
 
 | Invariant | What it measures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Turing degree** | Computational complexity of a set |
 | **Arithmetical hierarchy** | Quantifier complexity (Σₙ, Πₙ) |
 | **Jump** | **a'** = halting problem relative to **a** |
@@ -170,13 +170,13 @@ Regular cardinals: cf(κ) = κ. Singular: cf(κ) < κ.
 
 **The construction:** G says "I am not provable in F" (self-reference via Gödel numbering). If F proves G, then G is false (F proves a falsehood) → F is inconsistent. If F proves ¬G, then G is true (G is unprovable) but F proves ¬G → F is ω-inconsistent. So neither is provable.
 
-**Why it matters:** Mathematics cannot be complete. There will always be true statements beyond any given system's reach. This isn't a flaw in our axioms—it's a necessary feature of any sufficiently strong system.
+**Importance:** Mathematics cannot be complete. There will always be true statements beyond any given system's reach. This isn't a flaw in our axioms—it's a necessary feature of any sufficiently strong system.
 
 **2. Gödel's Second Incompleteness Theorem**
 
 > *If F is consistent and sufficiently strong, then F cannot prove Con(F).*
 
-**Why it matters:** Hilbert wanted to prove mathematics consistent using "finitary" (weak) methods. Gödel showed: a system can't even prove its *own* consistency, let alone be proved consistent by something weaker. Self-justification is impossible.
+**Importance:** Hilbert wanted to prove mathematics consistent using "finitary" (weak) methods. Gödel showed: a system can't even prove its *own* consistency, let alone be proved consistent by something weaker. Self-justification is impossible.
 
 **Caveat:** F can prove "if F is consistent, then Con(F) is not provable"—the second theorem is itself provable!
 
@@ -186,7 +186,7 @@ Regular cardinals: cf(κ) = κ. Singular: cf(κ) < κ.
 
 $$T \vdash \phi \iff T \models \phi$$
 
-**Why it matters:** Syntax (proof) and semantics (truth in models) coincide for first-order logic. This is miraculous—not true for second-order logic or most other systems.
+**Importance:** Syntax (proof) and semantics (truth in models) coincide for first-order logic. This is miraculous—not true for second-order logic or most other systems.
 
 **The duality:** Completeness (soundness + this theorem) says the proof system is exactly right. Incompleteness says there aren't enough axioms. These don't contradict: completeness is about the logic; incompleteness is about specific theories.
 
@@ -194,7 +194,7 @@ $$T \vdash \phi \iff T \models \phi$$
 
 > *A set of sentences T has a model iff every finite subset has a model.*
 
-**Why it matters:** 
+**Importance:** 
 
 This is a *finiteness* result—infinite consistency reduces to finite consistency.
 
@@ -208,7 +208,7 @@ Applications:
 > **Downward:** If T has an infinite model, it has a countable model.
 > **Upward:** If T has an infinite model, it has models of all larger cardinalities.
 
-**Why it matters:** First-order theories cannot pin down cardinality. Even the theory of real numbers has a countable model! (Skolem's paradox—the model "thinks" it's uncountable but externally it's countable.)
+**Importance:** First-order theories cannot pin down cardinality. Even the theory of real numbers has a countable model! (Skolem's paradox—the model "thinks" it's uncountable but externally it's countable.)
 
 This shows first-order logic is weak at distinguishing infinite sizes—a feature, not a bug, for many purposes.
 
@@ -219,7 +219,7 @@ This shows first-order logic is weak at distinguishing infinite sizes—a featur
 **Precise:** There is no formula Truth(x) in the language of arithmetic such that for all sentences φ:
 $$\text{Truth}(\ulcorner \phi \urcorner) \iff \phi$$
 
-**Why it matters:** Truth transcends any formal system. You can define "truth in L" in a richer language, but never internally. This is the semantic analog of Gödel's syntactic incompleteness.
+**Importance:** Truth transcends any formal system. You can define "truth in L" in a richer language, but never internally. This is the semantic analog of Gödel's syntactic incompleteness.
 
 **7. Church-Turing Thesis (not a theorem, but foundational)**
 
@@ -231,7 +231,7 @@ $$\text{Truth}(\ulcorner \phi \urcorner) \iff \phi$$
 
 > *There is no algorithm to decide whether a given Turing machine halts on a given input.*
 
-**Why it matters:** Computation has absolute limits. Not "we haven't found the algorithm"—no algorithm *can* exist. This is the computability analog of incompleteness.
+**Importance:** Computation has absolute limits. Not "we haven't found the algorithm"—no algorithm *can* exist. This is the computability analog of incompleteness.
 
 **The connection:** The halting problem is essentially "does this proof search terminate?"—linking computability and provability.
 
@@ -240,7 +240,7 @@ $$\text{Truth}(\ulcorner \phi \urcorner) \iff \phi$$
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Set Theory ↔ All Mathematics** | ZFC is the standard foundation. Every mathematical object can be encoded as a set. Independence results (CH, etc.) affect "real" mathematics. |
 | **Model Theory ↔ Algebra** | Algebraically closed fields, real closed fields, modules—all studied model-theoretically. Ax-Kochen: p-adic transfer. |
 | **Model Theory ↔ Geometry** | O-minimality (tame geometry). Definable sets in real structures. Applications to number theory (Pila-Wilkie). |
@@ -256,7 +256,7 @@ $$\text{Truth}(\ulcorner \phi \urcorner) \iff \phi$$
 **The syntax/semantics duality:**
 
 | Syntax | Semantics |
-|--------|-----------|
+| -------- | ----------- |
 | Proof | Truth (in models) |
 | Derivability T ⊢ φ | Validity T ⊨ φ |
 | Formal system | Class of structures |
@@ -314,7 +314,7 @@ Forcing is a general technique: set-theoretic forcing, arithmetic forcing, compu
 **Set theory:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | ∈, ∉ | Element of, not element of |
 | ⊆, ⊂ | Subset, proper subset |
 | ∪, ∩ | Union, intersection |
@@ -331,7 +331,7 @@ Forcing is a general technique: set-theoretic forcing, arithmetic forcing, compu
 **Logic:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | ∧, ∨, ¬ | And, or, not |
 | →, ↔ | Implies, iff |
 | ∀, ∃ | For all, exists |
@@ -348,7 +348,7 @@ Forcing is a general technique: set-theoretic forcing, arithmetic forcing, compu
 **Computability:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | {e} or φ_e | The e-th partial computable function |
 | W_e | Domain of φ_e (the e-th c.e. set) |
 | K | Halting problem: {e : φ_e(e)↓} |
@@ -363,7 +363,7 @@ Forcing is a general technique: set-theoretic forcing, arithmetic forcing, compu
 **Proof theory:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | ⊢_T | Provable in T |
 | ω-consistent | No proof of (∃x)¬φ(x) when all φ(n) are provable |
 | ε₀ | Proof-theoretic ordinal of PA |
@@ -465,7 +465,7 @@ Then come the non-standard numbers. They're not a single chain—between any two
 - 𝔐 ≇ ℕ (not isomorphic—different cardinality, or at least different structure)
 - 𝔐 contains "infinite" primes, "infinite" proofs of bounded length, etc.
 
-**Why this matters:**
+**Importance:**
 
 Non-standard models show:
 - First-order PA doesn't pin down the natural numbers
@@ -499,7 +499,7 @@ Either way, contradiction. So H doesn't exist. ∎
 **The diagonal structure:**
 
 | | M₁ | M₂ | M₃ | ... | D |
-|---|----|----|----|----|---|
+| --- | ---- | ---- | ---- | ---- | --- |
 | M₁ | H | - | H | ... | ? |
 | M₂ | - | - | H | ... | ? |
 | M₃ | H | H | - | ... | ? |
@@ -523,7 +523,7 @@ Since you're interested in deep structure, here's a glimpse of the "upper atmosp
 **The hierarchy (ascending strength):**
 
 | Level | Cardinal | Property |
-|-------|----------|----------|
+| ------- | ---------- | ---------- |
 | ZFC | ℵ₀, ℵ₁, ... | Basic cardinals |
 | Inaccessible | κ | Can't be reached by power sets and unions from below |
 | Mahlo | κ | Inaccessibles below are stationary |
@@ -536,7 +536,7 @@ Since you're interested in deep structure, here's a glimpse of the "upper atmosp
 | Rank-into-rank | κ | j: V_λ → V_λ |
 | Inconsistent? | 0 = 1 | Reinhardt cardinal (inconsistent with AC) |
 
-**Why this matters:**
+**Importance:**
 
 Large cardinals measure consistency strength. If Con(ZFC + measurable cardinal), then Con(ZFC + "Lebesgue measurable sets behave nicely").
 
@@ -562,7 +562,7 @@ There might be a "correct" inner model that settles CH and other independent que
 **The slogan:** Proofs are programs. Propositions are types.
 
 | Logic | Type Theory / Programming |
-|-------|--------------------------|
+| ------- | -------------------------- |
 | Proposition P | Type P |
 | Proof of P | Term of type P |
 | P → Q | Function type P → Q |
@@ -581,7 +581,7 @@ This corresponds to the trivial proof of A → A.
 The pairing function λx.λy.(x,y) has type A → B → A × B.
 This corresponds to the introduction rule for ∧.
 
-**Why this matters:**
+**Importance:**
 
 - Proof assistants (Coq, Lean, Agda) exploit this: write a program, get a proof
 - Program extraction: prove ∃x.P(x), extract a program computing such x

@@ -45,7 +45,7 @@ Then use algebra to prove topological theorems. If two spaces have different alg
 | **Covering space** | Space mapping down with discrete fibers | p: X̃ → X |
 | **CW complex** | Space built by attaching cells (disks) of increasing dimension | Standard way to construct spaces |
 
-**Morphisms:** 
+**Morphisms:**
 - Continuous maps induce homomorphisms on all these invariants
 - The assignment "space ↦ algebraic invariant" is a **functor**
 - Homotopic maps induce the *same* homomorphism (homotopy invariance)
@@ -276,8 +276,6 @@ For S¹:
 
 ---
 
-### Leverage for your work:
-
 **HoTT connection (deep):**
 
 HoTT is essentially algebraic topology *internalized*:
@@ -288,7 +286,7 @@ HoTT is essentially algebraic topology *internalized*:
 
 The univalence axiom is a *topological* statement: the path space of the universe (equality of types) is equivalent to the space of equivalences. This is wild from a classical logic perspective but natural topologically.
 
-Your HoTT-protein-folding paper: the space of folds has topological structure. Different folding pathways that reach the same fold are homotopic. The fundamental group of the fold space could detect topologically distinct folding mechanisms.
+Our HoTT-protein-folding paper link: the space of folds has topological structure. Different folding pathways that reach the same fold are homotopic. The fundamental group of the fold space could detect topologically distinct folding mechanisms.
 
 **Convergence Thesis:**
 

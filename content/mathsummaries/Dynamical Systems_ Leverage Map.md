@@ -17,7 +17,7 @@ Everything moves. Planets orbit, populations fluctuate, economies cycle, neurons
 
 **The core move:** Replace "solve the equation" with "understand the phase portrait." The state space becomes a geometric object; the dynamics becomes a flow on that object. Topology and geometry reveal what algebra cannot.
 
-**Why this matters beyond pure math:**
+**Importance beyond pure math:**
 - Climate: Is there a tipping point? Multiple stable states?
 - Neuroscience: Are brain states attractors? What causes transitions?
 - Machine learning: Does training converge? To what?
@@ -31,7 +31,7 @@ Dynamical systems theory provides the *qualitative* vocabulary for these questio
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **State space / Phase space** | The set of all possible states of the system | M, X, or ℝⁿ |
 | **Flow** | Continuous-time dynamics: a one-parameter group of diffeomorphisms | φ_t: M → M with φ_{s+t} = φ_s ∘ φ_t |
 | **Map / Discrete dynamics** | Discrete-time dynamics: iterate a function | f: M → M, study f, f², f³, ... |
@@ -49,7 +49,7 @@ Dynamical systems theory provides the *qualitative* vocabulary for these questio
 **Two fundamental types:**
 
 | Type | Evolution | Example | Key tool |
-|------|-----------|---------|----------|
+| ------ | ----------- | --------- | ---------- |
 | **Continuous (flow)** | dx/dt = f(x) | Planetary motion, neural dynamics | Vector fields, ODEs |
 | **Discrete (map)** | x_{n+1} = f(x_n) | Population models, Poincaré sections | Iteration, symbolic dynamics |
 
@@ -64,7 +64,7 @@ Dynamical systems theory provides the *qualitative* vocabulary for these questio
 The **Jacobian** Df(x*) at a fixed point linearizes the dynamics. Its eigenvalues determine local behavior:
 
 | Eigenvalue type | Behavior | Name |
-|-----------------|----------|------|
+| ----------------- | ---------- | ------ |
 | All Re(λ) < 0 | Trajectories approach x* | **Stable node/focus** |
 | All Re(λ) > 0 | Trajectories flee x* | **Unstable node/focus** |
 | Mixed signs | Some approach, some flee | **Saddle** |
@@ -74,7 +74,7 @@ The **Jacobian** Df(x*) at a fixed point linearizes the dynamics. Its eigenvalue
 **Global invariants:**
 
 | Invariant | What it captures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Number/type of attractors** | Long-term possibilities |
 | **Basin boundaries** | Which initial conditions go where |
 | **Periodic orbit structure** | Oscillatory modes |
@@ -103,14 +103,14 @@ Topological conjugacy: same orbit structure. Smooth conjugacy: same plus derivat
 **1. Hartman-Grobman Theorem**
 > *Near a hyperbolic fixed point (all eigenvalues have nonzero real part), the nonlinear system is topologically conjugate to its linearization.*
 
-**Why it matters:** You *can* understand local dynamics by linearizing—the eigenvalues tell the true story near the fixed point. This justifies all that linear stability analysis. The nonlinearities don't create new qualitative features near hyperbolic equilibria.
+**Importance:** You *can* understand local dynamics by linearizing—the eigenvalues tell the true story near the fixed point. This justifies all that linear stability analysis. The nonlinearities don't create new qualitative features near hyperbolic equilibria.
 
 **The catch:** Only topological conjugacy, not smooth. And it fails at non-hyperbolic points (where real parts are zero)—that's where bifurcations happen and life gets interesting.
 
 **2. Poincaré-Bendixson Theorem**
 > *For a continuous flow on ℝ² (or a 2D surface), a bounded trajectory that doesn't approach a fixed point must approach a periodic orbit.*
 
-**Why it matters:** In 2D, the only long-term possibilities are:
+**Importance:** In 2D, the only long-term possibilities are:
 - Fixed points
 - Periodic orbits
 - Heteroclinic/homoclinic connections (fixed point to fixed point)
@@ -120,31 +120,31 @@ Topological conjugacy: same orbit structure. Smooth conjugacy: same plus derivat
 **3. Stable Manifold Theorem**
 > *At a hyperbolic fixed point, there exist smooth stable and unstable manifolds Wˢ and Wᵘ tangent to the stable and unstable eigenspaces of the linearization.*
 
-**Why it matters:** The local eigenspace structure extends to global manifolds. Wˢ consists of all points flowing *to* the fixed point; Wᵘ consists of all points flowing *from* it (in backward time). These manifolds organize the global phase portrait.
+**Importance:** The local eigenspace structure extends to global manifolds. Wˢ consists of all points flowing *to* the fixed point; Wᵘ consists of all points flowing *from* it (in backward time). These manifolds organize the global phase portrait.
 
 When stable and unstable manifolds intersect transversally, you get horseshoes and chaos.
 
 **4. Poincaré Recurrence Theorem**
 > *For a measure-preserving flow on a space of finite measure, almost every trajectory returns arbitrarily close to its starting point infinitely often.*
 
-**Why it matters:** In Hamiltonian (conservative) systems, you can't have simple attractors—the flow preserves volume. Instead, trajectories wander and eventually return. This is the foundation of statistical mechanics (ergodic theory).
+**Importance:** In Hamiltonian (conservative) systems, you can't have simple attractors—the flow preserves volume. Instead, trajectories wander and eventually return. This is the foundation of statistical mechanics (ergodic theory).
 
 **5. Takens' Embedding Theorem**
 > *From a scalar time series of a deterministic system, you can reconstruct the attractor topology using delay coordinates (x(t), x(t+τ), x(t+2τ), ...) with enough delays.*
 
-**Why it matters:** You can study the dynamical system from *data alone*, without knowing the equations. This is the foundation of nonlinear time series analysis. Measure one variable; reconstruct the full attractor.
+**Importance:** You can study the dynamical system from *data alone*, without knowing the equations. This is the foundation of nonlinear time series analysis. Measure one variable; reconstruct the full attractor.
 
 **6. Center Manifold Theorem**
 > *Near a non-hyperbolic fixed point, the interesting dynamics lives on a (possibly low-dimensional) center manifold tangent to the center eigenspace (eigenvalues with zero real part).*
 
-**Why it matters:** Bifurcation analysis. When stability is marginal, reduce to the center manifold and analyze the reduced system. A 100-dimensional system near bifurcation might have 1D or 2D essential dynamics.
+**Importance:** Bifurcation analysis. When stability is marginal, reduce to the center manifold and analyze the reduced system. A 100-dimensional system near bifurcation might have 1D or 2D essential dynamics.
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Differential Geometry** | Phase space is a manifold. Flow is generated by a vector field. Symplectic geometry for Hamiltonian systems. |
 | **Lie Theory** | Symmetries of dynamical systems are Lie groups. Conservation laws from Noether's theorem. Reduction by symmetry. |
 | **Spectral Theory** | Linearization eigenvalues determine stability. Koopman operator: lift nonlinear dynamics to linear (infinite-dimensional) with spectral decomposition. |
@@ -208,7 +208,7 @@ These bifurcations are *universal*—the same patterns appear in lasers, neurons
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | dx/dt = f(x) or ẋ = f(x) | ODE defining continuous dynamics |
 | x_{n+1} = f(x_n) | Map defining discrete dynamics |
 | φ_t or φ^t | Flow (time-t evolution map) |
@@ -232,7 +232,7 @@ These bifurcations are *universal*—the same patterns appear in lasers, neurons
 **Common flows:**
 
 | Name | Equation | Behavior |
-|------|----------|----------|
+| ------ | ---------- | ---------- |
 | Linear | ẋ = Ax | Eigenvalues determine everything |
 | Gradient | ẋ = -∇V(x) | Flows downhill, no cycles (generic) |
 | Hamiltonian | ẋ = J∇H(x) | Preserves energy and phase space volume |
@@ -275,7 +275,7 @@ Stable Node        Saddle           Stable Spiral      Center
     ↗ ↑ ↖          ↘   ↙               ↺                ⟳
 ```
 
-**Why this matters:** Every more complex system, near a hyperbolic fixed point, looks locally like one of these (Hartman-Grobman). The 2D linear classification is the alphabet of local dynamics.
+**Importance:** Every more complex system, near a hyperbolic fixed point, looks locally like one of these (Hartman-Grobman). The 2D linear classification is the alphabet of local dynamics.
 
 ---
 
@@ -307,7 +307,7 @@ x*
        0
 ```
 
-**Why this matters:** This is the *generic* way for fixed points to appear/disappear. One parameter, one fixed point pair created/destroyed. The normal form ẋ = ρ + x² is universal—any system near a saddle-node bifurcation can be transformed to this (locally).
+**Importance:** This is the *generic* way for fixed points to appear/disappear. One parameter, one fixed point pair created/destroyed. The normal form ẋ = ρ + x² is universal—any system near a saddle-node bifurcation can be transformed to this (locally).
 
 **Physical interpretation:** ρ represents an external "pressure." Below threshold, the system has two equilibria (one stable "rest state"). As pressure increases, the equilibria approach each other, collide, annihilate. The system has no equilibrium and "runs away." This is a **tipping point**.
 
@@ -346,7 +346,7 @@ No stable fixed points or limit cycles. Trajectories wander forever on a fractal
 
 This is the geometric signature of chaos: exponential expansion (giving sensitive dependence) plus folding (keeping things bounded).
 
-**Why this matters:** Lorenz discovered this while modeling weather. The sensitive dependence means long-term weather prediction is fundamentally limited—not by computing power or measurement, but by the mathematics itself. "The butterfly effect."
+**Importance:** Lorenz discovered this while modeling weather. The sensitive dependence means long-term weather prediction is fundamentally limited—not by computing power or measurement, but by the mathematics itself. "The butterfly effect."
 
 ---
 

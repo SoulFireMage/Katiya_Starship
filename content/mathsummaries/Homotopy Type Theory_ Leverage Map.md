@@ -24,7 +24,7 @@ Two problems collided:
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Type** | Simultaneously: a proposition, a set, a space. The things that exist. | A, B, X, Y or 𝒰 (universe of types) |
 | **Term / Inhabitant** | An element of a type. A point in the space. A proof of the proposition. | a : A means "a is of type A" |
 | **Identity type** | The type of paths/equalities between two terms | Id_A(a,b) or a =_A b or Path_A(a,b) |
@@ -61,19 +61,19 @@ Two problems collided:
 > *(A ≃ B) ≃ (A = B)*
 > *Equivalence of types is equivalent to equality of types.*
 
-**Why it matters:** This is the heart of HoTT. It says: *things that behave the same ARE the same*. If two types are equivalent (isomorphic in the appropriate sense), there's a path between them in the universe of types. You can *transport* along this path—anything you prove about A automatically applies to B.
+**Importance:** This is the heart of HoTT. It says: *things that behave the same ARE the same*. If two types are equivalent (isomorphic in the appropriate sense), there's a path between them in the universe of types. You can *transport* along this path—anything you prove about A automatically applies to B.
 
 This is what mathematicians always wanted but set theory couldn't provide. "The reals as Dedekind cuts" and "the reals as Cauchy sequences" are *definitionally equal* once you establish equivalence.
 
 **2. Function Extensionality (follows from univalence)**
 > *If f(x) = g(x) for all x, then f = g*
 
-**Why it matters:** Two functions that give the same outputs are equal. Obvious, right? But it's unprovable in basic type theory. Univalence gives it to you. This is essential for reasoning about functions as first-class objects.
+**Importance:** Two functions that give the same outputs are equal. Obvious, right? But it's unprovable in basic type theory. Univalence gives it to you. This is essential for reasoning about functions as first-class objects.
 
 **3. Higher Inductive Types (HITs)**
 > *You can define types by specifying not just points but also paths (and higher paths) as constructors.*
 
-**Why it matters:** This lets you build spaces directly. Want a circle? One point, one non-trivial loop. Want a sphere? One point, one 2-path. Want to quotient by an equivalence relation? Add paths between equivalent points. HITs are how HoTT captures topology synthetically.
+**Importance:** This lets you build spaces directly. Want a circle? One point, one non-trivial loop. Want a sphere? One point, one 2-path. Want to quotient by an equivalence relation? Add paths between equivalent points. HITs are how HoTT captures topology synthetically.
 
 **Example:** The circle S¹ is defined by:
 - base : S¹ (a point)
@@ -86,7 +86,7 @@ That's it. This *is* the circle, not a representation of it.
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Topology** | Types are spaces, paths are paths, higher paths are homotopies. n-types correspond to n-groupoids. Fundamental group π₁ emerges naturally. |
 | **Category Theory** | Types and functions form a category. Higher structure makes it an ∞-category/∞-groupoid. Univalence = "the universe is a univalent (∞,1)-category." |
 | **Logic (Curry-Howard)** | Types = propositions, terms = proofs, identity type = equality proposition. A proof of a=b is evidence they're equal. Different proofs = different paths = equality has structure. |
@@ -128,7 +128,7 @@ HoTT adds:
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | a : A | "a is a term of type A" / "a inhabits A" / "a is a point in A" |
 | A → B | Function type (non-dependent) |
 | Π(x:A).B(x) or ∀(x:A).B(x) | Dependent function: for each x:A, produces something in B(x) |
@@ -186,7 +186,7 @@ tr_p : B(a) → B(a')
 
 **Construction:** By path induction, it suffices to handle p = refl_a. But then B(a) = B(a'), so we just need the identity function. Done.
 
-**Why this matters:** Transport is how univalence becomes useful. If you prove A ≃ B, univalence gives you a path p : A = B in the universe. Then for any type family F over the universe, transport along p moves things: F(A) → F(B). Theorems about A become theorems about B *automatically*.
+**Importance:** Transport is how univalence becomes useful. If you prove A ≃ B, univalence gives you a path p : A = B in the universe. Then for any type family F over the universe, transport along p moves things: F(A) → F(B). Theorems about A become theorems about B *automatically*.
 
 ---
 

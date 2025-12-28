@@ -30,7 +30,7 @@ or characterize when solutions exist, are unique, can be found efficiently.
 **The convexity revolution:**
 
 | Problem type | Difficulty | Methods |
-|--------------|------------|---------|
+| -------------- | ------------ | --------- |
 | General nonlinear | NP-hard typically | Heuristics, local methods |
 | Convex | Polynomial time | Efficient algorithms with guarantees |
 | Linear | Polynomial time | Simplex, interior point |
@@ -55,7 +55,7 @@ Optimization unifies:
 **The basic setup:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Objective function** | What you minimize | f: ℝⁿ → ℝ ∪ {+∞} |
 | **Feasible set** | Where you can search | C ⊆ ℝⁿ |
 | **Minimizer** | Point achieving minimum | x* = argmin f |
@@ -66,7 +66,7 @@ Optimization unifies:
 **Convexity:**
 
 | Object | Definition |
-|--------|------------|
+| -------- | ------------ |
 | **Convex set** | λx + (1-λ)y ∈ C for x,y ∈ C, λ ∈ [0,1] |
 | **Convex function** | f(λx + (1-λ)y) ≤ λf(x) + (1-λ)f(y) |
 | **Strictly convex** | Strict inequality for x ≠ y, λ ∈ (0,1) |
@@ -76,7 +76,7 @@ Optimization unifies:
 **Differential structure:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Gradient** | Vector of partial derivatives | ∇f(x) |
 | **Hessian** | Matrix of second derivatives | ∇²f(x) or Hf(x) |
 | **Subdifferential** | Set of subgradients (for non-smooth f) | ∂f(x) |
@@ -86,7 +86,7 @@ Optimization unifies:
 **Constraint structure:**
 
 | Type | Form | Example |
-|------|------|---------|
+| ------ | ------ | --------- |
 | **Unconstrained** | min f(x) | Ridge regression |
 | **Equality constrained** | min f(x) s.t. h(x) = 0 | Lagrange multipliers |
 | **Inequality constrained** | min f(x) s.t. g(x) ≤ 0 | KKT conditions |
@@ -97,7 +97,7 @@ Optimization unifies:
 **Duality objects:**
 
 | Object | What it is |
-|--------|-----------|
+| -------- | ----------- |
 | **Lagrangian** | L(x, λ, ν) = f(x) + λᵀg(x) + νᵀh(x) |
 | **Lagrange multiplier** | Dual variable associated to constraint |
 | **Dual function** | g(λ, ν) = inf_x L(x, λ, ν) |
@@ -118,7 +118,7 @@ Optimization unifies:
 **For functions:**
 
 | Property | Characterization | Implication |
-|----------|------------------|-------------|
+| ---------- | ------------------ | ------------- |
 | **Convex** | Hessian ≥ 0 (PSD) | Local min = global min |
 | **Strictly convex** | Hessian > 0 on non-zero directions | At most one minimizer |
 | **Strongly convex (μ)** | Hessian ≥ μI | Unique minimizer, fast convergence |
@@ -146,7 +146,7 @@ Gap = 0 means strong duality holds. The gap is a certificate of optimality.
 **Constraint qualification:**
 
 | Condition | When it holds |
-|-----------|---------------|
+| ----------- | --------------- |
 | **Slater** | ∃ strictly feasible point (for convex) |
 | **LICQ** | Active constraint gradients linearly independent |
 | **MFCQ** | Weaker than LICQ, still implies KKT |
@@ -165,18 +165,18 @@ These ensure Lagrange multipliers exist and KKT conditions are necessary.
 **1. Weierstrass Extreme Value Theorem**
 > *A continuous function on a compact set attains its minimum and maximum.*
 
-**Why it matters:** Guarantees existence. Continuous + compact = solution exists. This is why we often add constraints (bounded domain) or coercivity (f(x) → ∞ as ‖x‖ → ∞).
+**Importance:** Guarantees existence. Continuous + compact = solution exists. This is why we often add constraints (bounded domain) or coercivity (f(x) → ∞ as ‖x‖ → ∞).
 
 **2. First-Order Optimality (Fermat)**
 > *If x* is a local minimum of differentiable f and x* is interior, then ∇f(x*) = 0.*
 
-**Why it matters:** The foundational necessary condition. Critical points are candidates for optima. For convex f, this is also sufficient.
+**Importance:** The foundational necessary condition. Critical points are candidates for optima. For convex f, this is also sufficient.
 
 **3. Second-Order Conditions**
 > **Necessary:** At local minimum, ∇f(x*) = 0 and ∇²f(x*) ≥ 0 (PSD).
 > **Sufficient:** ∇f(x*) = 0 and ∇²f(x*) > 0 (PD) implies local minimum.
 
-**Why it matters:** The Hessian determines local geometry. Positive definite = bowl-shaped = minimum. Indefinite = saddle point.
+**Importance:** The Hessian determines local geometry. Positive definite = bowl-shaped = minimum. Indefinite = saddle point.
 
 **4. KKT Conditions (Karush-Kuhn-Tucker)**
 > *For min f(x) s.t. g_i(x) ≤ 0, h_j(x) = 0, under constraint qualification:*
@@ -187,12 +187,12 @@ These ensure Lagrange multipliers exist and KKT conditions are necessary.
 > - **Dual feasibility:** λᵢ* ≥ 0
 > - **Complementary slackness:** λᵢ*gᵢ(x*) = 0
 
-**Why it matters:** THE conditions for constrained optimization. For convex problems, KKT is necessary AND sufficient. The multipliers λ, ν are economically meaningful (shadow prices).
+**Importance:** THE conditions for constrained optimization. For convex problems, KKT is necessary AND sufficient. The multipliers λ, ν are economically meaningful (shadow prices).
 
 **5. Strong Duality (Slater's Condition)**
 > *For convex optimization with Slater's condition (strictly feasible point exists), strong duality holds: optimal primal value = optimal dual value.*
 
-**Why it matters:** The dual problem is often easier. Strong duality means solving either solves both. It enables:
+**Importance:** The dual problem is often easier. Strong duality means solving either solves both. It enables:
 - Lower bounds on optimal value
 - Optimality certificates (zero duality gap)
 - Decomposition methods
@@ -202,7 +202,7 @@ These ensure Lagrange multipliers exist and KKT conditions are necessary.
 > $$\min_x f(x) + g(Ax) = \max_y -f^*(-A^T y) - g^*(y)$$
 > *under appropriate conditions.*
 
-**Why it matters:** General duality framework. f* and g* are convex conjugates. Many specific dualities (LP, conic) are special cases.
+**Importance:** General duality framework. f* and g* are convex conjugates. Many specific dualities (LP, conic) are special cases.
 
 **7. Gradient Descent Convergence**
 > *For L-smooth convex f, gradient descent with step size 1/L:*
@@ -211,21 +211,21 @@ These ensure Lagrange multipliers exist and KKT conditions are necessary.
 > *For μ-strongly convex:*
 > $$f(x_k) - f^* \leq \left(1 - \frac{\mu}{L}\right)^k (f(x_0) - f^*)$$
 
-**Why it matters:** Quantifies convergence rates. Smooth + convex = O(1/k). Smooth + strongly convex = linear (geometric) convergence.
+**Importance:** Quantifies convergence rates. Smooth + convex = O(1/k). Smooth + strongly convex = linear (geometric) convergence.
 
 **8. Nesterov Acceleration**
 > *Accelerated gradient descent achieves:*
 > $$f(x_k) - f^* \leq O\left(\frac{1}{k^2}\right) \quad \text{(convex)}$$
 > $$f(x_k) - f^* \leq \left(1 - \sqrt{\frac{\mu}{L}}\right)^k (f(x_0) - f^*) \quad \text{(strongly convex)}$$
 
-**Why it matters:** Provably optimal! No first-order method can do better (in worst case). The acceleration uses momentum—a simple modification with profound effect.
+**Importance:** Provably optimal! No first-order method can do better (in worst case). The acceleration uses momentum—a simple modification with profound effect.
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Calculus of Variations** | Infinite-dimensional optimization. Euler-Lagrange equations. Geodesics, minimal surfaces. |
 | **Functional Analysis** | Optimization in Banach/Hilbert spaces. Weak convergence, compactness. |
 | **Convex Geometry** | Convex sets, support functions, polarity. Minkowski sums. |
@@ -244,7 +244,7 @@ These ensure Lagrange multipliers exist and KKT conditions are necessary.
 **Duality everywhere:**
 
 | Primal | Dual |
-|--------|------|
+| -------- | ------ |
 | Minimize | Maximize |
 | Primal variables | Dual variables (multipliers) |
 | Constraints | Dual objective terms |
@@ -305,7 +305,7 @@ This gives natural geometries for optimization:
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | min, max | Minimum, maximum (when achieved) |
 | inf, sup | Infimum, supremum (may not be achieved) |
 | argmin, argmax | Point(s) achieving min/max |
@@ -331,7 +331,7 @@ This gives natural geometries for optimization:
 **Common problem classes:**
 
 | Class | Form |
-|-------|------|
+| ------- | ------ |
 | **LP** | min cᵀx s.t. Ax = b, x ≥ 0 |
 | **QP** | min ½xᵀQx + cᵀx s.t. Ax ≤ b |
 | **SOCP** | min cᵀx s.t. ‖Aᵢx + bᵢ‖ ≤ cᵢᵀx + dᵢ |
@@ -341,7 +341,7 @@ This gives natural geometries for optimization:
 **Algorithms:**
 
 | Method | Per-iteration | Convergence |
-|--------|---------------|-------------|
+| -------- | --------------- | ------------- |
 | Gradient descent | O(n) | O(1/k) convex, O((1-μ/L)^k) strongly |
 | Accelerated GD | O(n) | O(1/k²) convex, O((1-√(μ/L))^k) strongly |
 | Newton | O(n³) | Quadratic (local) |
@@ -476,7 +476,7 @@ $$[\text{prox}(z)]_j = \text{sign}(z_j) \max(|z_j| - \eta\lambda, 0)$$
 
 **Convergence:** O(1/k) for convex. Accelerated version (FISTA) achieves O(1/k²).
 
-**Why this matters:**
+**Importance:**
 
 LASSO produces sparse solutions (many wⱼ = 0) because soft thresholding pushes small values to exactly zero. This is:
 - Feature selection
@@ -503,7 +503,7 @@ $$\min_\theta \frac{1}{n} \sum_{i=1}^{n} \ell(f_\theta(x_i), y_i) + R(\theta)$$
 **Why might it work?**
 
 | Hypothesis | Idea |
-|------------|------|
+| ------------ | ------ |
 | **Overparameterization** | More parameters than data → many global minima → easier to find one |
 | **Implicit regularization** | SGD finds "flat" minima that generalize |
 | **Loss landscape structure** | Local minima may be nearly as good as global |
@@ -512,7 +512,7 @@ $$\min_\theta \frac{1}{n} \sum_{i=1}^{n} \ell(f_\theta(x_i), y_i) + R(\theta)$$
 **Key phenomena:**
 
 | Phenomenon | Description |
-|------------|-------------|
+| ------------ | ------------- |
 | **Double descent** | Test error decreases, increases, then decreases again with model size |
 | **Grokking** | Sudden generalization after overfitting |
 | **Loss spikes** | Sudden increases then recovery during training |
@@ -521,7 +521,7 @@ $$\min_\theta \frac{1}{n} \sum_{i=1}^{n} \ell(f_\theta(x_i), y_i) + R(\theta)$$
 **Optimization methods in deep learning:**
 
 | Method | Update rule | Key feature |
-|--------|-------------|-------------|
+| -------- | ------------- | ------------- |
 | SGD | θ ← θ - η∇ℓ_batch | Noisy gradient |
 | Momentum | v ← βv + ∇ℓ; θ ← θ - ηv | Accumulates direction |
 | Adam | Adaptive learning rates + momentum | Rescales per-parameter |

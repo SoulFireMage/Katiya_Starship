@@ -42,7 +42,7 @@ The Fourier transform is arguably the most important single operation in applied
 **The Fourier transform (various conventions):**
 
 | Domain | Transform | Inverse |
-|--------|-----------|---------|
+| -------- | ----------- | --------- |
 | **L¹(ℝ)** | f̂(ξ) = ∫ f(x)e^{-2πixξ} dx | f(x) = ∫ f̂(ξ)e^{2πixξ} dξ |
 | **L²(ℝ)** | Same, extended by density | Plancherel: ‖f̂‖₂ = ‖f‖₂ |
 | **𝕋 = ℝ/ℤ** (periodic) | f̂(n) = ∫₀¹ f(x)e^{-2πinx} dx | f(x) = Σₙ f̂(n)e^{2πinx} |
@@ -52,7 +52,7 @@ The Fourier transform is arguably the most important single operation in applied
 **Core objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Fourier transform** | Decomposition into frequencies | f̂, ℱf, F[f] |
 | **Fourier series** | Periodic case, discrete frequencies | Σ cₙe^{inx} |
 | **Convolution** | (f * g)(x) = ∫ f(y)g(x-y) dy | f * g |
@@ -67,7 +67,7 @@ The Fourier transform is arguably the most important single operation in applied
 **Function spaces:**
 
 | Space | Definition | Norm |
-|-------|------------|------|
+| ------- | ------------ | ------ |
 | Lᵖ(ℝⁿ) | ∫\|f\|ᵖ < ∞ | ‖f‖_p = (∫\|f\|ᵖ)^{1/p} |
 | L^∞ | Essential supremum finite | ‖f‖_∞ = ess sup \|f\| |
 | Schwartz 𝒮 | Rapidly decreasing smooth functions | Seminorms on derivatives |
@@ -88,7 +88,7 @@ The Fourier transform is arguably the most important single operation in applied
 **The Fourier transform properties:**
 
 | Property | Statement |
-|----------|-----------|
+| ---------- | ----------- |
 | **Linearity** | (αf + βg)^ = αf̂ + βĝ |
 | **Translation** | (τₐf)^ (ξ) = e^{-2πiaξ}f̂(ξ) |
 | **Modulation** | (e^{2πiax}f)^ (ξ) = f̂(ξ-a) |
@@ -107,7 +107,7 @@ Equality iff f is a Gaussian. You cannot be localized in both position and frequ
 **Decay and smoothness duality:**
 
 | f has... | f̂ has... |
-|----------|----------|
+| ---------- | ---------- |
 | Compact support | Real analytic (entire) |
 | Rapid decay (Schwartz) | Rapid decay (Schwartz) |
 | n derivatives in L¹ | (1+\|ξ\|)ⁿf̂ bounded |
@@ -116,7 +116,7 @@ Equality iff f is a Gaussian. You cannot be localized in both position and frequ
 **Key exponents:**
 
 | Bound | Meaning |
-|-------|---------|
+| ------- | --------- |
 | ‖f̂‖_∞ ≤ ‖f‖₁ | L¹ → L^∞ |
 | ‖f̂‖₂ = ‖f‖₂ | L² → L² isometry |
 | ‖f̂‖_q ≤ C‖f‖_p | Hausdorff-Young: 1/p + 1/q = 1, 1 ≤ p ≤ 2 |
@@ -135,7 +135,7 @@ Equality iff f is a Gaussian. You cannot be localized in both position and frequ
 > *For f ∈ L¹(ℝ) with f̂ ∈ L¹(ℝ):*
 > $$f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2\pi i x\xi} d\xi$$
 
-**Why it matters:** The Fourier transform is invertible—you can recover f from f̂. Analysis (decomposition) and synthesis (reconstruction) are dual operations.
+**Importance:** The Fourier transform is invertible—you can recover f from f̂. Analysis (decomposition) and synthesis (reconstruction) are dual operations.
 
 **Caveats:** Need f̂ ∈ L¹ for pointwise inversion. In L², inversion is via limit of truncated integrals.
 
@@ -143,17 +143,17 @@ Equality iff f is a Gaussian. You cannot be localized in both position and frequ
 > *The Fourier transform extends to a unitary operator on L²(ℝ):*
 > $$\|\hat{f}\|_2 = \|f\|_2$$
 
-**Why it matters:** The Fourier transform preserves energy (L² norm). It's an isometry, hence has an inverse. This is why L² is the natural home for Fourier analysis.
+**Importance:** The Fourier transform preserves energy (L² norm). It's an isometry, hence has an inverse. This is why L² is the natural home for Fourier analysis.
 
 **3. Riemann-Lebesgue Lemma**
 > *If f ∈ L¹(ℝ), then f̂ is continuous and f̂(ξ) → 0 as |ξ| → ∞.*
 
-**Why it matters:** High-frequency components of L¹ functions must decay. This constrains what can be a Fourier transform.
+**Importance:** High-frequency components of L¹ functions must decay. This constrains what can be a Fourier transform.
 
 **4. Carleson's Theorem**
 > *For f ∈ L²(𝕋), the Fourier series converges to f(x) almost everywhere.*
 
-**Why it matters:** This resolved a century-old question: does the Fourier series of an L² function converge pointwise? Yes, a.e. (not everywhere—counterexamples exist). The proof (1966) was a tour de force.
+**Importance:** This resolved a century-old question: does the Fourier series of an L² function converge pointwise? Yes, a.e. (not everywhere—counterexamples exist). The proof (1966) was a tour de force.
 
 **Contrast:** For L¹ functions, Fourier series can diverge on sets of positive measure (Kolmogorov).
 
@@ -162,13 +162,13 @@ Equality iff f is a Gaussian. You cannot be localized in both position and frequ
 > $$Tf(x) = \text{p.v.} \int \frac{\Omega(x-y)}{|x-y|^n} f(y) dy$$
 > *are bounded on Lᵖ for 1 < p < ∞ (under conditions on Ω).*
 
-**Why it matters:** This extends Fourier analysis to handle singular objects. The Hilbert transform, Riesz transforms, and many PDE operators fit this framework. The theory gives Lᵖ bounds without explicit computation.
+**Importance:** This extends Fourier analysis to handle singular objects. The Hilbert transform, Riesz transforms, and many PDE operators fit this framework. The theory gives Lᵖ bounds without explicit computation.
 
 **6. Littlewood-Paley Theory**
 > *Decompose f into frequency bands: f = Σⱼ Δⱼf where Δⱼ picks out frequencies ~2ʲ. Then:*
 > $$\|f\|_p \sim \left\|\left(\sum_j |\Delta_j f|^2\right)^{1/2}\right\|_p$$
 
-**Why it matters:** This "square function" characterization lets you analyze f frequency-by-frequency, then reassemble. It's fundamental for:
+**Importance:** This "square function" characterization lets you analyze f frequency-by-frequency, then reassemble. It's fundamental for:
 - Bounding multipliers
 - Paradifferential calculus
 - Wavelets
@@ -176,14 +176,14 @@ Equality iff f is a Gaussian. You cannot be localized in both position and frequ
 **7. Paley-Wiener Theorem**
 > *f̂ has compact support iff f extends to an entire function of exponential type.*
 
-**Why it matters:** Characterizes bandlimited functions. A signal with no frequencies above B is determined by samples at rate 2B (Nyquist-Shannon sampling theorem follows).
+**Importance:** Characterizes bandlimited functions. A signal with no frequencies above B is determined by samples at rate 2B (Nyquist-Shannon sampling theorem follows).
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **PDEs** | Fourier transform converts differential equations to algebraic. Heat kernel, wave propagation, Schrödinger. Pseudodifferential operators. |
 | **Probability** | Characteristic functions ARE Fourier transforms. Central limit theorem via Fourier. Lévy's inversion. |
 | **Number Theory** | Poisson summation, theta functions, modular forms. Circle method. Analytic number theory. |
@@ -249,7 +249,7 @@ Localizing in space spreads in frequency; localizing in frequency spreads in spa
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | f̂ or ℱf | Fourier transform of f |
 | f̌ or ℱ⁻¹f | Inverse Fourier transform |
 | f * g | Convolution |
@@ -273,7 +273,7 @@ Localizing in space spreads in frequency; localizing in frequency spreads in spa
 **Key transforms:**
 
 | Transform | Definition | Pair |
-|-----------|------------|------|
+| ----------- | ------------ | ------ |
 | Fourier | f̂(ξ) = ∫ f(x)e^{-2πixξ} dx | (f, f̂) |
 | Laplace | F(s) = ∫₀^∞ f(t)e^{-st} dt | (f, F) |
 | Mellin | φ(s) = ∫₀^∞ f(x)x^{s-1} dx | Multiplicative Fourier |
@@ -353,7 +353,7 @@ If F = f + iHf (analytic signal), then F extends to a holomorphic function in th
 
 The Hilbert transform extracts the imaginary part from the boundary values of a holomorphic function with given real part.
 
-**Why it matters:**
+**Importance:**
 
 - Signal processing: instantaneous phase and amplitude
 - PDEs: Cauchy-Riemann equations
@@ -410,7 +410,7 @@ Build a ladder of approximation spaces V₀ ⊂ V₁ ⊂ V₂ ⊂ ... where Vⱼ
 **The general pattern:**
 
 | Group | "Frequencies" | Transform |
-|-------|---------------|-----------|
+| ------- | --------------- | ----------- |
 | ℝ | ℝ (continuous) | Fourier transform |
 | 𝕋 = ℝ/ℤ | ℤ (discrete) | Fourier series |
 | ℤ | 𝕋 (continuous) | Discrete-time Fourier |

@@ -28,7 +28,7 @@ tags: ["mathematics", "linear-algebra", "SVD", "PCA", "leverage-map"]
 ## B. CORE OBJECTS & MORPHISMS
 
 | Object | Notation | Plain gloss |
-|--------|----------|-------------|
+| -------- | ---------- | ------------- |
 | **Matrix** | $A \in \mathbb{R}^{m \times n}$ | Linear map from n-dim to m-dim space |
 | **Singular values** | $\sigma_1 \geq \sigma_2 \geq \cdots \geq \sigma_r > 0$ | The stretch factors, always non-negative, ordered by size |
 | **Left singular vectors** | $u_i \in \mathbb{R}^m$ (columns of $U$) | Output directions — where the stretched vectors land |
@@ -61,7 +61,7 @@ tags: ["mathematics", "linear-algebra", "SVD", "PCA", "leverage-map"]
 
 **Statement:** Every matrix $A \in \mathbb{R}^{m \times n}$ can be written as $A = U\Sigma V^T$ where $U$ is $m \times m$ orthogonal, $V$ is $n \times n$ orthogonal, and $\Sigma$ is $m \times n$ diagonal with non-negative entries.
 
-**Why it matters:** This isn't obvious! Not every matrix is diagonalizable. But every matrix *becomes* diagonal if you're allowed to use *different* orthonormal bases for input and output. The price of generality: you need two rotations, not one.
+**Importance:** This isn't obvious! Not every matrix is diagonalizable. But every matrix *becomes* diagonal if you're allowed to use *different* orthonormal bases for input and output. The price of generality: you need two rotations, not one.
 
 **Plain terms:** Every linear map, no matter how twisted, is secretly just "stretch along some axes" if you pick the right coordinate systems on both sides.
 
@@ -69,7 +69,7 @@ tags: ["mathematics", "linear-algebra", "SVD", "PCA", "leverage-map"]
 
 **Statement:** The best rank-$k$ approximation to $A$ (in Frobenius or spectral norm) is $A_k = \sum_{i=1}^k \sigma_i u_i v_i^T$ — just keep the top $k$ singular values and their vectors.
 
-**Why it matters:** This is why SVD *works* for compression, denoising, dimensionality reduction. Truncating is *provably optimal*. No other rank-$k$ matrix gets closer.
+**Importance:** This is why SVD *works* for compression, denoising, dimensionality reduction. Truncating is *provably optimal*. No other rank-$k$ matrix gets closer.
 
 **Plain terms:** To compress a matrix, just drop the smallest stretches. You literally cannot do better.
 
@@ -80,14 +80,14 @@ tags: ["mathematics", "linear-algebra", "SVD", "PCA", "leverage-map"]
 - Right singular vectors $v_i$ are eigenvectors of $A^TA$
 - Left singular vectors $u_i$ are eigenvectors of $AA^T$
 
-**Why it matters:** This is how you *compute* SVD — via eigenproblems on symmetric matrices. Also reveals that $A^TA$ is the "covariance-like" object whose eigenstructure SVD exposes.
+**Importance:** This is how you *compute* SVD — via eigenproblems on symmetric matrices. Also reveals that $A^TA$ is the "covariance-like" object whose eigenstructure SVD exposes.
 
 ---
 
 ## E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Quantum mechanics** | Schmidt decomposition of entangled states = SVD. Singular values = entanglement spectrum. |
 | **Statistics/ML** | PCA is SVD of centered data. Covariance eigenvectors = right singular vectors. |
 | **Signal processing** | Karhunen-Loève transform. Optimal basis for representing signals. |
@@ -124,7 +124,7 @@ tags: ["mathematics", "linear-algebra", "SVD", "PCA", "leverage-map"]
 ## G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | $A = U\Sigma V^T$ | The SVD factorization (some sources write $V^*$ for complex) |
 | $\sigma_i$ or $s_i$ | The $i$-th singular value |
 | $u_i, v_i$ | Left/right singular vectors (columns of $U$, $V$) |
@@ -137,7 +137,7 @@ tags: ["mathematics", "linear-algebra", "SVD", "PCA", "leverage-map"]
 
 **PCA-specific:**
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | $\bar{x}$ | Mean of data vectors |
 | $X_c$ | Centered data matrix (mean subtracted) |
 | $C = \frac{1}{n}X_c^T X_c$ | Sample covariance matrix |

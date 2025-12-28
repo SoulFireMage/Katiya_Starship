@@ -104,7 +104,7 @@ Suddenly "just counting" requires sophisticated machinery: generating functions,
 **Graph invariants:**
 
 | Invariant | What it measures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | χ(G) | Chromatic number (colors needed) |
 | ω(G) | Clique number (largest clique) |
 | α(G) | Independence number |
@@ -117,7 +117,7 @@ Suddenly "just counting" requires sophisticated machinery: generating functions,
 **Extremal quantities:**
 
 | Quantity | Meaning |
-|----------|---------|
+| ---------- | --------- |
 | ex(n, H) | Max edges in n-vertex graph avoiding H |
 | R(k, l) | Ramsey number: min n guaranteeing k-clique or l-independent set |
 | t_r(n) | Turán number: max edges avoiding K_{r+1} |
@@ -133,43 +133,44 @@ Suddenly "just counting" requires sophisticated machinery: generating functions,
 ### D. SIGNATURE THEOREMS
 
 **1. Binomial Theorem**
+
 > $$(x + y)^n = \sum_{k=0}^{n} \binom{n}{k} x^k y^{n-k}$$
 
-**Why it matters:** The fundamental identity of enumerative combinatorics. It encodes Pascal's triangle, proves countless identities, and generalizes to multinomials, negative exponents (Newton), and q-analogs.
+**Importance:** The fundamental identity of enumerative combinatorics. It encodes Pascal's triangle, proves countless identities, and generalizes to multinomials, negative exponents (Newton), and q-analogs.
 
 **2. Inclusion-Exclusion Principle**
 > $$\left|\bigcup_{i=1}^{n} A_i\right| = \sum_{i} |A_i| - \sum_{i<j} |A_i \cap A_j| + \sum_{i<j<k} |A_i \cap A_j \cap A_k| - \cdots$$
 
-**Why it matters:** The workhorse for "count everything, subtract overcounts." Proves derangement formula, Euler's φ function, chromatic polynomial, Möbius inversion.
+**Importance:** The workhorse for "count everything, subtract overcounts." Proves derangement formula, Euler's φ function, chromatic polynomial, Möbius inversion.
 
 **3. Cayley's Formula**
 > *The number of labeled trees on n vertices is nⁿ⁻².*
 
-**Why it matters:** Surprising closed form! Proofs include Prüfer sequences (bijective), matrix-tree theorem (algebraic), and double counting. Each proof illuminates different structure.
+**Importance:** Surprising closed form! Proofs include Prüfer sequences (bijective), matrix-tree theorem (algebraic), and double counting. Each proof illuminates different structure.
 
 **4. Turán's Theorem**
 > *The maximum edges in an n-vertex graph with no K_{r+1} is:*
 > $$t_r(n) = \left(1 - \frac{1}{r}\right)\frac{n^2}{2}$$
 > *achieved uniquely by the complete r-partite graph with parts as equal as possible.*
 
-**Why it matters:** The foundation of extremal graph theory. If you forbid a complete subgraph, this is exactly how dense you can be. Generalizations (Erdős-Stone) relate density to chromatic number.
+**Importance:** The foundation of extremal graph theory. If you forbid a complete subgraph, this is exactly how dense you can be. Generalizations (Erdős-Stone) relate density to chromatic number.
 
 **5. Ramsey's Theorem**
 > *For any k, l, there exists R(k,l) such that any 2-coloring of edges of K_{R(k,l)} contains a monochromatic K_k or K_l.*
 
-**Why it matters:** "Complete disorder is impossible." Any sufficiently large structure contains regular substructures. This is the birth of Ramsey theory—the study of unavoidable patterns.
+**Importance:** "Complete disorder is impossible." Any sufficiently large structure contains regular substructures. This is the birth of Ramsey theory—the study of unavoidable patterns.
 
 **Bounds:** R(3,3) = 6, R(4,4) = 18, R(5,5) is between 43 and 48. Exact values are notoriously hard.
 
 **6. Szemerédi's Theorem**
 > *Any subset of integers with positive upper density contains arbitrarily long arithmetic progressions.*
 
-**Why it matters:** A deep regularity result. If a set is "large" (positive density), it must contain 3-term, 4-term, ... k-term progressions for all k. Multiple proofs: combinatorial (Szemerédi), ergodic (Furstenberg), Fourier-analytic (Gowers).
+**Importance:** A deep regularity result. If a set is "large" (positive density), it must contain 3-term, 4-term, ... k-term progressions for all k. Multiple proofs: combinatorial (Szemerédi), ergodic (Furstenberg), Fourier-analytic (Gowers).
 
 **7. The Probabilistic Method (Erdős)**
 > *To prove a combinatorial object exists, show a random object has positive probability of having the desired property.*
 
-**Why it matters:** Revolutionary existence proofs! To show a graph with property P exists, construct a random graph and compute P(property P) > 0. You prove existence without constructing anything explicitly.
+**Importance:** Revolutionary existence proofs! To show a graph with property P exists, construct a random graph and compute P(property P) > 0. You prove existence without constructing anything explicitly.
 
 **Example (Ramsey lower bound):** Color edges of Kₙ randomly. Expected monochromatic K_k is C(n,k)·2^{1-C(k,2)}. If this is < 1, some coloring has no monochromatic K_k. Thus R(k,k) > n for suitable n, giving R(k,k) > 2^{k/2}.
 
@@ -199,7 +200,7 @@ The sequence (aₙ) ↔ the function F(x) = Σ aₙxⁿ.
 Operations on sequences become operations on functions:
 
 | Sequence operation | GF operation |
-|-------------------|--------------|
+| ------------------- | -------------- |
 | Addition | Addition |
 | Convolution | Multiplication |
 | Differentiation | x·d/dx (weighted shift) |
@@ -244,7 +245,7 @@ This often reveals *why* things are equal, not just *that* they're equal. The bi
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| ------- | --------- |
 | n! | Factorial |
 | (n)_k = n(n-1)...(n-k+1) | Falling factorial |
 | n^{(k)} = n(n+1)...(n+k-1) | Rising factorial |
@@ -272,9 +273,9 @@ This often reveals *why* things are equal, not just *that* they're equal. The bi
 **Asymptotics:**
 
 | Notation | Meaning |
-|----------|---------|
+| ---------- | --------- |
 | f ~ g | f/g → 1 |
-| f = O(g) | |f| ≤ C|g| eventually |
+| f = O(g) | \|f\| ≤ C\|g\| eventually |
 | f = o(g) | f/g → 0 |
 | f = Θ(g) | f = O(g) and g = O(f) |
 | f = Ω(g) | g = O(f) |
@@ -299,7 +300,7 @@ So a Dyck path of length 2n = U + (Dyck path of length 2(k-1)) + D + (Dyck path 
 
 **The recurrence:**
 
-$$C_n = \sum_{k=1}^{n} C_{k-1} C_{n-k} = \sum_{j=0}^{n-1} C_j C_{n-1-j}$$
+> $$C_n = \sum_{k=1}^{n} C_{k-1} C_{n-k} = \sum_{j=0}^{n-1} C_j C_{n-1-j}$$
 
 with C₀ = 1.
 
@@ -315,7 +316,8 @@ So C(x) = 1 + xC(x)² (the 1 accounts for C₀, and xC(x)² shifts the convoluti
 
 xC² - C + 1 = 0
 
-$$C = \frac{1 - \sqrt{1-4x}}{2x}$$
+>$$C = \frac{1 - \sqrt{1-4x}}{2x}$$
+
 
 (choosing the branch with C(0) = 1.)
 
@@ -333,7 +335,7 @@ $$C_n = \frac{1}{n+1}\binom{2n}{n}$$
 
 First few: 1, 1, 2, 5, 14, 42, 132, ...
 
-**Why this matters:**
+**Importance:**
 
 This same sequence counts:
 - Binary trees with n+1 leaves
@@ -416,14 +418,14 @@ Reverse the process. The key: vertex v appears in the sequence exactly (deg(v) -
 
 Count of sequences = nⁿ⁻². ∎
 
-**Why this matters:**
+**Importance:**
 
 The bijection reveals *structure*: degree sequence of tree ↔ multiplicities in sequence. The proof also shows:
 - Number of labeled trees with degree sequence (d₁, ..., dₙ) is the multinomial coefficient (n-2)!/∏(dᵢ-1)!
 
 ---
 
-### Leverage for your work:
+### Leverage
 
 **Neural network combinatorics:**
 
@@ -461,7 +463,5 @@ What's the minimum network size to express a function class? This is an extremal
 **Ramsey for representations:**
 
 If representations have enough dimensions, must they contain certain substructures? Ramsey-type results say: large enough = unavoidable regularity. This might constrain what high-dimensional representations look like.
-
----
-
-**We're at 19 domains now. Continuing to Harmonic Analysis next!**
+ 
+ 

@@ -30,7 +30,7 @@ Shannon showed:
 
 **The core move:** Separate the *source* (what you want to say) from the *channel* (how you transmit it). Compress the source to remove redundancy. Add redundancy back strategically for error correction. These are independent problems with independent solutions.
 
-**Why this matters:**
+**Importance:**
 - **Communication:** Every modern communication system (internet, cell phones, WiFi, satellites) is designed using Shannon's theory
 - **Compression:** ZIP, MP3, JPEG, video codecs—all information theory
 - **Cryptography:** Perfect secrecy, key rates, secure communication
@@ -46,7 +46,7 @@ Shannon showed:
 **The fundamental quantities:**
 
 | Object | What it is | Formula |
-|--------|-----------|---------|
+| -------- | ----------- | --------- |
 | **Entropy** | Uncertainty / information content of a random variable | H(X) = -Σ p(x) log p(x) |
 | **Joint entropy** | Uncertainty of two variables together | H(X,Y) = -Σ p(x,y) log p(x,y) |
 | **Conditional entropy** | Remaining uncertainty given knowledge of another | H(X\|Y) = H(X,Y) - H(Y) |
@@ -76,7 +76,7 @@ Shannon showed:
 **The fundamental problems:**
 
 | Problem | Question | Answer |
-|---------|----------|--------|
+| --------- | ---------- | -------- |
 | **Source coding** | How much can you compress? | H(X) bits per symbol |
 | **Channel coding** | How fast can you communicate reliably? | C = max_{P_X} I(X;Y) bits per use |
 | **Rate-distortion** | How much compression at given fidelity? | R(D) = min_{P_{X̂\|X}: 𝔼[d(X,X̂)]≤D} I(X;X̂) |
@@ -93,7 +93,7 @@ Channels are the morphisms. A channel P_{Y|X} transforms input X to output Y. Co
 **Entropy as the fundamental measure:**
 
 | Property | Statement |
-|----------|-----------|
+| ---------- | ----------- |
 | **Non-negativity** | H(X) ≥ 0 (= 0 iff X is deterministic) |
 | **Maximum** | H(X) ≤ log|𝒳| (achieved by uniform distribution) |
 | **Additivity** | H(X,Y) = H(X) + H(Y) if X ⊥ Y |
@@ -103,7 +103,7 @@ Channels are the morphisms. A channel P_{Y|X} transforms input X to output Y. Co
 **Mutual information properties:**
 
 | Property | Statement |
-|----------|-----------|
+| ---------- | ----------- |
 | **Non-negativity** | I(X;Y) ≥ 0 (= 0 iff X ⊥ Y) |
 | **Symmetry** | I(X;Y) = I(Y;X) |
 | **Chain rule** | I(X;Y,Z) = I(X;Y) + I(X;Z|Y) |
@@ -114,7 +114,7 @@ Channels are the morphisms. A channel P_{Y|X} transforms input X to output Y. Co
 **KL divergence properties:**
 
 | Property | Statement |
-|----------|-----------|
+| ---------- | ----------- |
 | **Non-negativity** | D(P‖Q) ≥ 0 (Gibbs' inequality) |
 | **Zero iff equal** | D(P‖Q) = 0 ⟺ P = Q |
 | **Not symmetric** | D(P‖Q) ≠ D(Q‖P) in general |
@@ -135,7 +135,7 @@ Channels are the morphisms. A channel P_{Y|X} transforms input X to output Y. Co
 
 **Precise statement:** For n i.i.d. samples from X, there exist codes achieving rate R > H(X) with vanishing error probability, and no code can achieve rate R < H(X) with vanishing error.
 
-**Why it matters:** Entropy IS the compressibility. H(X) bits is both achievable and necessary. This defines entropy operationally—it's not just a formula, it's what compression achieves.
+**Importance:** Entropy IS the compressibility. H(X) bits is both achievable and necessary. This defines entropy operationally—it's not just a formula, it's what compression achieves.
 
 **Typical sequences:** The key insight is *typicality*. Among 2^{nH} possible sequences, almost all probability mass concentrates on ~2^{nH(X)} "typical" sequences. Encode only these.
 
@@ -144,7 +144,7 @@ Channels are the morphisms. A channel P_{Y|X} transforms input X to output Y. Co
 
 **Precise statement:** For any R < C and any ε > 0, there exist codes of rate R with error probability < ε. Conversely, for R > C, error probability is bounded away from 0.
 
-**Why it matters:** This is the most important theorem in information theory. It says:
+**Importance:** This is the most important theorem in information theory. It says:
 - There's a sharp threshold (capacity)
 - Reliable communication is possible right up to that threshold
 - The threshold is computable
@@ -154,12 +154,12 @@ Channels are the morphisms. A channel P_{Y|X} transforms input X to output Y. Co
 **3. Rate-Distortion Theorem**
 > *To represent source X with average distortion ≤ D, you need at least R(D) bits per symbol, where R(D) = min I(X;X̂) over distributions achieving distortion D.*
 
-**Why it matters:** Source coding with a fidelity criterion. You can't compress below H(X) losslessly, but you can compress further if you accept distortion. R(D) is the rate-distortion function—it tells you exactly how bits trade off against fidelity.
+**Importance:** Source coding with a fidelity criterion. You can't compress below H(X) losslessly, but you can compress further if you accept distortion. R(D) is the rate-distortion function—it tells you exactly how bits trade off against fidelity.
 
 **4. Data Processing Inequality**
 > *If X → Y → Z forms a Markov chain, then I(X;Z) ≤ I(X;Y).*
 
-**Why it matters:** Processing can only destroy information, never create it. This is why:
+**Importance:** Processing can only destroy information, never create it. This is why:
 - Sufficient statistics capture all relevant information
 - Cascaded channels can only lose capacity
 - You can't recover information that's been lost
@@ -170,7 +170,7 @@ Channels are the morphisms. A channel P_{Y|X} transforms input X to output Y. Co
 > *For independent continuous random variables X, Y:*
 > $$e^{2h(X+Y)} \geq e^{2h(X)} + e^{2h(Y)}$$
 
-**Why it matters:** This is the information-theoretic analog of the Brunn-Minkowski inequality in geometry. It implies:
+**Importance:** This is the information-theoretic analog of the Brunn-Minkowski inequality in geometry. It implies:
 - Gaussian has maximum entropy for given variance
 - Central limit theorem has information-theoretic proof
 - Bounds on capacity of Gaussian channels
@@ -179,14 +179,14 @@ Channels are the morphisms. A channel P_{Y|X} transforms input X to output Y. Co
 > *For i.i.d. X₁,...,Xₙ:*
 > $$-\frac{1}{n} \log P(X_1,...,X_n) \to H(X) \text{ in probability}$$
 
-**Why it matters:** The probability of a typical sequence is approximately 2^{-nH}. There are approximately 2^{nH} typical sequences. This is *why* compression to H bits works—typical sequences are all roughly equally likely, and there are just the right number of them.
+**Importance:** The probability of a typical sequence is approximately 2^{-nH}. There are approximately 2^{nH} typical sequences. This is *why* compression to H bits works—typical sequences are all roughly equally likely, and there are just the right number of them.
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Probability / Statistics** | Entropy is expected log-likelihood. KL divergence is log-likelihood ratio. Mutual information measures dependence. Maximum entropy = principle for inference. |
 | **Measure Theory** | Entropy is an integral. Differential entropy needs measure theory. Radon-Nikodym for KL divergence. |
 | **Coding Theory** | Source coding, channel coding, error correction. Algebraic codes, LDPC codes, polar codes. |
@@ -249,7 +249,7 @@ KL divergence induces geometry on probability space (information geometry). Mutu
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | H(X) | Entropy of X |
 | H(X,Y) | Joint entropy |
 | H(X\|Y) | Conditional entropy |
@@ -271,7 +271,7 @@ KL divergence induces geometry on probability space (information geometry). Mutu
 **Key formulas:**
 
 | Quantity | Formula |
-|----------|---------|
+| ---------- | --------- |
 | Entropy | H(X) = -Σ_x p(x) log p(x) = 𝔼[-log p(X)] |
 | Mutual information | I(X;Y) = Σ_{x,y} p(x,y) log(p(x,y)/(p(x)p(y))) |
 | KL divergence | D(P‖Q) = Σ_x p(x) log(p(x)/q(x)) |
@@ -283,7 +283,7 @@ KL divergence induces geometry on probability space (information geometry). Mutu
 **Common channels:**
 
 | Channel | Description | Capacity |
-|---------|-------------|----------|
+| --------- | ------------- | ---------- |
 | **Binary symmetric** | Flips each bit with prob p | C = 1 - H_b(p) |
 | **Binary erasure** | Erases each bit with prob ε | C = 1 - ε |
 | **AWGN** | Y = X + N, N ~ N(0,σ²) | C = ½ log(1 + P/σ²) |
@@ -306,7 +306,7 @@ This is the *binary entropy function*.
 **Key values:**
 
 | p | H_b(p) |
-|---|--------|
+| --- | -------- |
 | 0 | 0 (certain: always 0) |
 | 0.5 | 1 (maximum uncertainty) |
 | 1 | 0 (certain: always 1) |
@@ -367,7 +367,7 @@ $$C_{BSC} = 1 - H_b(p)$$
 **Key values:**
 
 | p | C |
-|---|---|
+| --- | --- |
 | 0 | 1 bit (perfect channel) |
 | 0.1 | 0.531 bits |
 | 0.5 | 0 bits (pure noise, output independent of input) |
@@ -414,7 +414,7 @@ Z = re-compressed version
 
 I(X;Z) ≤ I(X;Y): The twice-compressed version has less information about the original than the once-compressed version. You can't recover lost information.
 
-**Why this matters:**
+**Importance:**
 
 This is why:
 - Lossy compression is irreversible

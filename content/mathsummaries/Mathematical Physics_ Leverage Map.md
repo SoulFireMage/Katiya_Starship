@@ -14,7 +14,7 @@ Physics kept discovering that nature speaks mathematics—but not the mathematic
 **The pattern:** Physical intuition outruns mathematical foundations. Then mathematics catches up, revealing the physics was pointing at deep structure all along.
 
 | Era | Physical Need | Mathematical Response |
-|-----|---------------|----------------------|
+| ----- | --------------- | ---------------------- |
 | 1600s | Planetary motion | Calculus (Newton, Leibniz) |
 | 1800s | Heat, waves, electromagnetism | Fourier analysis, PDEs, vector calculus |
 | 1900s | Quantum mechanics | Hilbert spaces, spectral theory, operators |
@@ -35,7 +35,7 @@ Physics kept discovering that nature speaks mathematics—but not the mathematic
 **The hierarchy of physical theories:**
 
 | Level | Theory | Mathematical Framework |
-|-------|--------|------------------------|
+| ------- | -------- | ------------------------ |
 | **Classical Mechanics** | Point particles | Symplectic geometry, Hamiltonian systems |
 | **Field Theory (Classical)** | Fields on spacetime | Variational calculus, jet bundles, PDEs |
 | **Quantum Mechanics** | Single/few particles | Hilbert space, self-adjoint operators |
@@ -47,7 +47,7 @@ Physics kept discovering that nature speaks mathematics—but not the mathematic
 **Classical mechanics objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Configuration space** | All possible positions | Q (often a manifold) |
 | **Phase space** | Positions + momenta | T*Q (cotangent bundle) |
 | **Symplectic form** | The geometry of phase space | ω = Σ dp_i ∧ dq_i |
@@ -59,7 +59,7 @@ Physics kept discovering that nature speaks mathematics—but not the mathematic
 **Quantum mechanics objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **State space** | Hilbert space | ℋ (often L²) |
 | **State** | Unit vector (ray) in ℋ | |ψ⟩ or ψ |
 | **Observable** | Self-adjoint operator | Â, Ĥ, etc. |
@@ -71,7 +71,7 @@ Physics kept discovering that nature speaks mathematics—but not the mathematic
 **Gauge theory objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Principal bundle** | Space with fiber = Lie group G | P → M |
 | **Connection** | "Horizontal" subspaces / gauge field | A ∈ Ω¹(P, 𝔤) |
 | **Curvature** | Failure of parallel transport / field strength | F = dA + A ∧ A |
@@ -93,7 +93,7 @@ Physics kept discovering that nature speaks mathematics—but not the mathematic
 **Conservation laws (classical):**
 
 | Symmetry | Conserved Quantity |
-|----------|-------------------|
+| ---------- | ------------------- |
 | Time translation | Energy H |
 | Space translation | Momentum p |
 | Rotation | Angular momentum L |
@@ -108,7 +108,7 @@ is conserved along solutions.
 **Quantum numbers:**
 
 | Quantum Number | Operator | Eigenvalues |
-|----------------|----------|-------------|
+| ---------------- | ---------- | ------------- |
 | Energy | Ĥ | Spectrum (discrete or continuous) |
 | Angular momentum | L̂² | ℏ²l(l+1), l = 0, 1, 2, ... |
 | z-component | L̂_z | ℏm, m = -l, ..., l |
@@ -117,7 +117,7 @@ is conserved along solutions.
 **Topological invariants in physics:**
 
 | Invariant | Physical Meaning |
-|-----------|------------------|
+| ----------- | ------------------ |
 | Winding number | Vortex charge, magnetic flux quanta |
 | Chern number | Hall conductance (integers!) |
 | Instanton number | Tunneling between vacua |
@@ -140,22 +140,22 @@ is conserved along solutions.
 
 **Mathematical form:** If the Lie derivative ℒ_X L = 0 for vector field X, then the Noether current J_X is conserved: dJ_X = 0.
 
-**Why it matters:** This is the deepest principle in physics. It explains *why* energy, momentum, angular momentum are conserved—because the laws don't depend on when, where, or in which direction you do the experiment. Conservation isn't imposed; it emerges from symmetry.
+**Importance:** This is the deepest principle in physics. It explains *why* energy, momentum, angular momentum are conserved—because the laws don't depend on when, where, or in which direction you do the experiment. Conservation isn't imposed; it emerges from symmetry.
 
 **2. Stone-von Neumann Theorem**
 > *Up to unitary equivalence, there is a unique irreducible representation of the canonical commutation relations [q̂, p̂] = iℏ on a Hilbert space.*
 
-**Why it matters:** Quantum mechanics is essentially unique. Once you specify the CCR (the quantization of {q, p} = 1), the Hilbert space is determined. You *must* get L²(ℝ) (up to equivalence). This is why we don't have competing versions of QM with different Hilbert spaces.
+**Importance:** Quantum mechanics is essentially unique. Once you specify the CCR (the quantization of {q, p} = 1), the Hilbert space is determined. You *must* get L²(ℝ) (up to equivalence). This is why we don't have competing versions of QM with different Hilbert spaces.
 
 **Caveat:** Fails in infinite dimensions (QFT)—this is related to inequivalent representations and the infrared problem.
 
 **3. Wigner's Classification**
 > *Irreducible unitary representations of the Poincaré group are classified by mass m ≥ 0 and spin s (integer or half-integer).*
 
-**Why it matters:** Elementary particles ARE irreducible representations of spacetime symmetry. A particle is defined by how it transforms under Lorentz boosts and rotations. Mass and spin aren't arbitrary labels—they're representation-theoretic invariants.
+**Importance:** Elementary particles ARE irreducible representations of spacetime symmetry. A particle is defined by how it transforms under Lorentz boosts and rotations. Mass and spin aren't arbitrary labels—they're representation-theoretic invariants.
 
 | Representation | Physical Particle |
-|----------------|-------------------|
+| ---------------- | ------------------- |
 | m > 0, s = 0 | Scalar (Higgs) |
 | m > 0, s = ½ | Spinor (electron, quark) |
 | m > 0, s = 1 | Vector (W, Z bosons) |
@@ -166,7 +166,7 @@ is conserved along solutions.
 > *For an elliptic differential operator D on a compact manifold:*
 > $$\text{ind}(D) = \dim \ker(D) - \dim \ker(D^*) = \int_M \text{(topological characteristic classes)}$$
 
-**Why it matters:** Connects analysis (kernels of operators) to topology (characteristic classes). In physics:
+**Importance:** Connects analysis (kernels of operators) to topology (characteristic classes). In physics:
 - Anomalies in QFT are index theory
 - Zero modes of Dirac operator control fermion physics
 - Instantons are detected by index
@@ -176,26 +176,26 @@ The theorem says: you can count solutions to differential equations by computing
 **5. Coleman-Mandula / Haag-Łopuszański-Sohnius**
 > *The only way to combine spacetime and internal symmetries (beyond trivial product) is supersymmetry.*
 
-**Why it matters:** You might think you could unify gravity with gauge forces by some clever symmetry group. Coleman-Mandula says: no, spacetime symmetry (Poincaré) and internal symmetry (gauge) must be separate—unless you allow fermionic generators, which gives supersymmetry.
+**Importance:** You might think you could unify gravity with gauge forces by some clever symmetry group. Coleman-Mandula says: no, spacetime symmetry (Poincaré) and internal symmetry (gauge) must be separate—unless you allow fermionic generators, which gives supersymmetry.
 
 This is why supersymmetry is theoretically natural (even if Nature hasn't confirmed it).
 
 **6. CPT Theorem**
 > *Any Lorentz-invariant local quantum field theory with a Hermitian Hamiltonian is invariant under the combined operation of charge conjugation (C), parity (P), and time reversal (T).*
 
-**Why it matters:** You can violate C (matter vs. antimatter), P (left vs. right), T (past vs. future), even CP, but CPT together is sacred. This is forced by the structure of relativistic QFT—it's not an assumption, it's a theorem.
+**Importance:** You can violate C (matter vs. antimatter), P (left vs. right), T (past vs. future), even CP, but CPT together is sacred. This is forced by the structure of relativistic QFT—it's not an assumption, it's a theorem.
 
 **7. Spin-Statistics Theorem**
 > *In relativistic QFT: integer spin ↔ bosons (symmetric wave functions); half-integer spin ↔ fermions (antisymmetric wave functions, Pauli exclusion).*
 
-**Why it matters:** This explains why matter is stable (fermions can't all collapse to the same state) and why photons can form coherent beams (bosons can pile up). The connection between spin (geometry) and statistics (quantum counting) is deep and necessary, not contingent.
+**Importance:** This explains why matter is stable (fermions can't all collapse to the same state) and why photons can form coherent beams (bosons can pile up). The connection between spin (geometry) and statistics (quantum counting) is deep and necessary, not contingent.
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Differential Geometry** | GR is Riemannian/Lorentzian geometry. Gauge theory is fiber bundle geometry. Phase space is symplectic geometry. |
 | **Lie Theory** | Symmetry groups everywhere. Poincaré, gauge groups, Lie algebra of observables. Representation theory classifies particles. |
 | **Functional Analysis** | QM is Hilbert space operator theory. Spectral theory IS measurement theory. Distributions for singular objects. |
@@ -226,7 +226,7 @@ Why? Deep question. Maybe: the action principle *is* the structure of physics.
 **The trinity of formulations:**
 
 | Formulation | Mathematical Structure | Key Object |
-|-------------|------------------------|------------|
+| ------------- | ------------------------ | ------------ |
 | Lagrangian | Tangent bundle TQ | L: TQ → ℝ |
 | Hamiltonian | Cotangent bundle T*Q | H: T*Q → ℝ |
 | Path Integral | Space of all paths | ∫ 𝒟φ e^{iS[φ]/ℏ} |
@@ -272,7 +272,7 @@ The deformation parameter is ℏ. As ℏ → 0, quantum → classical. Deformati
 **Classical mechanics:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | q, q_i | Generalized coordinates |
 | p, p_i | Conjugate momenta |
 | L = T - V | Lagrangian |
@@ -284,7 +284,7 @@ The deformation parameter is ℏ. As ℏ → 0, quantum → classical. Deformati
 **Quantum mechanics:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | |ψ⟩, ⟨φ| | Ket and bra (Dirac notation) |
 | ⟨φ|ψ⟩ | Inner product |
 | ⟨φ|Â|ψ⟩ | Matrix element |
@@ -298,7 +298,7 @@ The deformation parameter is ℏ. As ℏ → 0, quantum → classical. Deformati
 **Field theory:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | φ(x), ψ(x) | Fields |
 | ℒ | Lagrangian density |
 | S = ∫ ℒ d⁴x | Action |
@@ -310,7 +310,7 @@ The deformation parameter is ℏ. As ℏ → 0, quantum → classical. Deformati
 **Gauge theory:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | A_μ | Gauge potential (connection) |
 | F_{μν} = ∂_μ A_ν - ∂_ν A_μ + [A_μ, A_ν] | Field strength (curvature) |
 | D_μ = ∂_μ + A_μ | Covariant derivative |
@@ -320,7 +320,7 @@ The deformation parameter is ℏ. As ℏ → 0, quantum → classical. Deformati
 **Relativity:**
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | g_{μν} | Metric tensor |
 | ds² = g_{μν}dx^μ dx^ν | Line element |
 | Γ^λ_{μν} | Christoffel symbols |
@@ -389,7 +389,7 @@ where â|0⟩ = 0 defines the ground state.
 â†|n⟩ = √(n+1)|n+1⟩ (creation)
 â|n⟩ = √n|n-1⟩ (annihilation)
 
-**Why this matters:**
+**Importance:**
 
 The harmonic oscillator is the "hydrogen atom of QFT." Every free field is an infinite collection of oscillators (one per momentum mode). Creation/annihilation operators create/destroy particles. The Fock space of QFT is built from these oscillator spaces.
 
@@ -442,7 +442,7 @@ Covariant derivative: D_μψ = (∂_μ - ieA_μ)ψ
 
 D_μψ transforms like ψ: D_μψ → e^{iχ}D_μψ
 
-**Why this matters:**
+**Importance:**
 
 This is the prototype for all gauge theories:
 - Electromagnetism: U(1)
@@ -488,7 +488,7 @@ $$K(x_b, t_b; x_a, t_a) = \sqrt{\frac{m}{2\pi i\hbar(t_b-t_a)}} \exp\left(\frac{
 
 The phase oscillates wildly except near the classical path where δS = 0. By stationary phase, the classical path dominates. Quantum mechanics → classical mechanics as ℏ → 0.
 
-**Why this matters:**
+**Importance:**
 
 The path integral is:
 - The natural formulation for QFT (fields, not particles)
@@ -505,7 +505,7 @@ The "sum over histories" philosophy: all possibilities contribute, weighted by p
 **The Standard Model in one picture:**
 
 | Component | Mathematical Structure |
-|-----------|------------------------|
+| ----------- | ------------------------ |
 | Spacetime | 4D Lorentzian manifold (Minkowski, approximately) |
 | Gauge group | G = SU(3) × SU(2) × U(1) |
 | Gauge fields | Connection on principal G-bundle |
@@ -528,7 +528,7 @@ The "sum over histories" philosophy: all possibilities contribute, weighted by p
 **The deep principles:**
 
 | Principle | Mathematical Expression |
-|-----------|-------------------------|
+| ----------- | ------------------------- |
 | Relativity | Poincaré invariance of S |
 | Gauge invariance | G-equivariance of S |
 | Locality | S = ∫ ℒ(φ, ∂φ) (depends only on fields and first derivatives) |

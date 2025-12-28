@@ -30,7 +30,7 @@ Lie theory exists because we needed to study **groups that are also manifolds**�
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Lie group** | A smooth manifold G with smooth group operations (multiplication, inverse) | G, H, K |
 | **Lie algebra** | The tangent space at identity, with Lie bracket [·,·] | 𝔤, 𝔥, 𝔨 (fraktur) |
 | **Lie bracket** | Bilinear, antisymmetric, satisfies Jacobi identity: [X,[Y,Z]] + cyclic = 0 | [X, Y] |
@@ -47,7 +47,7 @@ Lie theory exists because we needed to study **groups that are also manifolds**�
 **Key examples:**
 
 | Lie Group | Manifold | Lie Algebra | Dimension |
-|-----------|----------|-------------|-----------|
+| ----------- | ---------- | ------------- | ----------- |
 | GL(n,ℝ) | Open subset of ℝⁿ² | 𝔤𝔩(n,ℝ) = all n×n matrices | n² |
 | SL(n,ℝ) | det = 1 | 𝔰𝔩(n,ℝ) = traceless matrices | n²-1 |
 | O(n) | Orthogonal matrices | 𝔬(n) = antisymmetric matrices | n(n-1)/2 |
@@ -113,7 +113,7 @@ The roots α form a highly constrained geometric pattern—the root system. This
 
 > **Third:** For every finite-dimensional Lie algebra 𝔤, there exists a simply connected Lie group G with Lie algebra 𝔤, unique up to isomorphism. Every connected Lie group with algebra 𝔤 is a quotient of G by a discrete central subgroup.
 
-**Why this matters:** The correspondence between Lie groups and Lie algebras is tight:
+**Importance:** The correspondence between Lie groups and Lie algebras is tight:
 - Algebra determines local group structure completely
 - Algebra determines global structure up to discrete ambiguity (covering spaces)
 - Algebraic problems (linear!) capture geometric problems (nonlinear!)
@@ -124,7 +124,7 @@ The roots α form a highly constrained geometric pattern—the root system. This
 > - **Classical:** A_n (𝔰𝔩_{n+1}), B_n (𝔰𝔬_{2n+1}), C_n (𝔰𝔭_{2n}), D_n (𝔰𝔬_{2n})
 > - **Exceptional:** G₂, F₄, E₆, E₇, E₈
 
-**Why this matters:** Complete classification! There are exactly these families and five exceptions—no others. The classification is encoded in Dynkin diagrams:
+**Importance:** Complete classification! There are exactly these families and five exceptions—no others. The classification is encoded in Dynkin diagrams:
 
 ```
 A_n: ○—○—○—...—○     (n nodes)
@@ -159,27 +159,27 @@ Each node = simple root. Edges encode angles between roots. The diagram determin
 > - exp is a local diffeomorphism near 0
 > - d/dt|₀ exp(tX) = X
 
-**Why this matters:** The exponential map is how you go from infinitesimal (Lie algebra) to finite (Lie group). One-parameter subgroups are exactly curves of the form exp(tX). Rotations by angle θ around axis n̂ are exp(θ n̂·J) where J are rotation generators.
+**Importance:** The exponential map is how you go from infinitesimal (Lie algebra) to finite (Lie group). One-parameter subgroups are exactly curves of the form exp(tX). Rotations by angle θ around axis n̂ are exp(θ n̂·J) where J are rotation generators.
 
 **4. Baker-Campbell-Hausdorff Formula**
 
 > *If X, Y ∈ 𝔤, then exp(X)exp(Y) = exp(Z) where:*
 > $$Z = X + Y + \frac{1}{2}[X,Y] + \frac{1}{12}[X,[X,Y]] - \frac{1}{12}[Y,[X,Y]] + \cdots$$
 
-**Why this matters:** Group multiplication becomes algebra operations (brackets). If [X,Y] = 0, then exp(X)exp(Y) = exp(X+Y)—just add. The correction terms involve nested brackets. This is how non-commutativity at the group level emerges from the bracket at the algebra level.
+**Importance:** Group multiplication becomes algebra operations (brackets). If [X,Y] = 0, then exp(X)exp(Y) = exp(X+Y)—just add. The correction terms involve nested brackets. This is how non-commutativity at the group level emerges from the bracket at the algebra level.
 
 **5. Peter-Weyl Theorem**
 
 > *For compact Lie group G, the matrix coefficients of irreducible representations form an orthonormal basis of L²(G).*
 
-**Why this matters:** Representation theory gives you Fourier analysis on the group. For G = S¹ = U(1), this is ordinary Fourier series. For G = SU(2), you get spherical harmonics. The irreps are the "frequencies"; the matrix elements are the "basis functions."
+**Importance:** Representation theory gives you Fourier analysis on the group. For G = S¹ = U(1), this is ordinary Fourier series. For G = SU(2), you get spherical harmonics. The irreps are the "frequencies"; the matrix elements are the "basis functions."
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Physics (QM)** | Observables generate symmetries via exp(iHt). Angular momentum operators are 𝔰𝔲(2) or 𝔰𝔬(3). Commutators become Poisson brackets in classical limit. |
 | **Particle Physics** | The Standard Model is SU(3) × SU(2) × U(1). Quarks/leptons are representations. Gauge bosons live in the Lie algebra. The whole theory is Lie-theoretic. |
 | **Differential Geometry** | The frame bundle has structure group GL(n) or O(n). Connections are Lie-algebra-valued 1-forms. Curvature is Lie-algebra-valued 2-form. |
@@ -235,7 +235,7 @@ Transfer matrix in statistical mechanics: T = exp(-βH)
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | G, H, K | Lie groups |
 | 𝔤, 𝔥, 𝔨 | Lie algebras (fraktur letters) |
 | [X, Y] | Lie bracket |
@@ -301,7 +301,7 @@ So 𝔰𝔲(2) ≅ 𝔰𝔬(3) as Lie algebras.
 
 But SU(2) is simply connected; SO(3) ≅ SU(2)/{±I} has π₁ = ℤ/2.
 
-**Why this matters:** Electrons are spin-½ = representations of SU(2) that don't descend to SO(3). A 2π rotation gives a factor of -1. This is *why* spinors exist—the algebra is the same, but the groups differ, and spinors see the covering group.
+**Importance:** Electrons are spin-½ = representations of SU(2) that don't descend to SO(3). A 2π rotation gives a factor of -1. This is *why* spinors exist—the algebra is the same, but the groups differ, and spinors see the covering group.
 
 ---
 

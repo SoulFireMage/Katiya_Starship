@@ -133,11 +133,12 @@ Birational geometry asks: when are varieties birationally equivalent? What's the
 ### D. SIGNATURE THEOREMS
 
 **1. Hilbert's Nullstellensatz**
-> *Over an algebraically closed field:*
-> $$I(V(J)) = \sqrt{J}$$
-> *The ideal of polynomials vanishing on the variety defined by J is the radical of J.*
 
-**Why it matters:** This is the fundamental bridge between algebra and geometry. It says:
+*Over an algebraically closed field:*
+$$I(V(J)) = \sqrt{J}$$
+*The ideal of polynomials vanishing on the variety defined by J is the radical of J.*
+
+**Importance:** This is the fundamental bridge between algebra and geometry. It says:
 - **Points ↔ maximal ideals:** A point (a₁,...,aₙ) corresponds to the maximal ideal (x₁-a₁,...,xₙ-aₙ)
 - **Varieties ↔ radical ideals:** The correspondence is bijective (for algebraically closed fields)
 
@@ -146,7 +147,7 @@ The "Nullstellen" (zero-places) are controlled by the "Satz" (theorem).
 **2. Bézout's Theorem**
 > *Two projective curves of degrees d and e in ℙ² meet in exactly d·e points, counted with multiplicity (and assuming no common components).*
 
-**Why it matters:** Degree is multiplicative for intersections! A line (d=1) meets a conic (d=2) in 2 points. Two conics meet in 4 points. This generalizes to higher dimensions.
+**Importance:** Degree is multiplicative for intersections! A line (d=1) meets a conic (d=2) in 2 points. Two conics meet in 4 points. This generalizes to higher dimensions.
 
 **Why projective:** In affine space, parallel lines don't meet. In projective space, they meet at infinity. Projective space makes Bézout work cleanly.
 
@@ -154,11 +155,11 @@ The "Nullstellen" (zero-places) are controlled by the "Satz" (theorem).
 
 For a smooth projective curve C of genus g, and divisor D:
 
-> $$\ell(D) - \ell(K - D) = \deg(D) - g + 1$$
+$$\ell(D) - \ell(K - D) = \deg(D) - g + 1$$
 
 where ℓ(D) = dim H⁰(C, 𝒪(D)) = number of linearly independent functions with poles bounded by D.
 
-**Why it matters:** This computes dimensions of function spaces. Given a curve, you can count:
+**Importance:** This computes dimensions of function spaces. Given a curve, you can count:
 - How many functions have prescribed poles
 - How many differential forms of various types exist
 - Whether the curve embeds in projective space of given dimension
@@ -168,21 +169,25 @@ This theorem drives an enormous amount of curve theory.
 **For surfaces and higher:** Riemann-Roch generalizes (Hirzebruch-Riemann-Roch, Grothendieck-Riemann-Roch), relating Euler characteristics to characteristic classes.
 
 **4. GAGA (Géométrie Algébrique et Géométrie Analytique)**
-> *For projective varieties over ℂ, the algebraic and analytic theories coincide:*
-> - *Algebraic coherent sheaves ↔ analytic coherent sheaves*
-> - *Algebraic morphisms ↔ analytic (holomorphic) morphisms*
-> - *Cohomology agrees*
 
-**Why it matters:** You can use complex analysis (integrals, Hodge theory, transcendental methods) to prove algebraic theorems. The algebraic and complex-analytic worlds, which *a priori* could differ, are the same for projective varieties.
+*For projective varieties over ℂ, the algebraic and analytic theories coincide:*
+
+- *Algebraic coherent sheaves ↔ analytic coherent sheaves*
+- *Algebraic morphisms ↔ analytic (holomorphic) morphisms*
+- *Cohomology agrees*
+
+**Importance:** You can use complex analysis (integrals, Hodge theory, transcendental methods) to prove algebraic theorems. The algebraic and complex-analytic worlds, which *a priori* could differ, are the same for projective varieties.
 
 This fails for non-projective varieties (there are more analytic functions than algebraic ones).
 
 **5. Weil Conjectures (proved by Grothendieck, Deligne)**
-> *For a variety X over a finite field 𝔽_q, the zeta function*
-> $$Z(X, t) = \exp\left(\sum_{n=1}^{\infty} \frac{|X(\mathbb{F}_{q^n})|}{n} t^n\right)$$
-> *is a rational function, satisfies a functional equation, and its zeros/poles satisfy a "Riemann hypothesis."*
 
-**Why it matters:** This is where your zeta intuitions live! Counting points on varieties over finite fields has deep structure:
+*For a variety X over a finite field 𝔽_q, the zeta function*
+ $$Z(X, t) = \exp\left(\sum_{n=1}^{\infty} \frac{|X(\mathbb{F}_{q^n})|}{n} t^n\right)$$
+ *is a rational function, satisfies a functional equation, and its zeros/poles satisfy a "Riemann hypothesis."*
+
+**Importance:** This is where zeta intuitions live! Counting points on varieties over finite fields has deep structure:
+
 - Rationality: the generating function is algebraic, not transcendental
 - Functional equation: symmetry like classical zeta
 - Riemann hypothesis: zeros lie on a specific line (proved by Deligne, 1974)
@@ -429,7 +434,7 @@ For curves of genus g > 0, the story is richer—H¹ is nonzero and controls the
 
 ---
 
-### Leverage for your work:
+### Leverage
 
 **Zeta functions and spectral intuitions:**
 
@@ -471,7 +476,3 @@ For neural networks: deforming weights is moving in a parameter space. Infinites
 Two different Calabi-Yau manifolds can give the same physics. This is "mirror symmetry"—a deep duality exchanging complex and symplectic geometry.
 
 In mirror symmetry, counts of curves (Gromov-Witten invariants) on one side equal periods (integrals of differential forms) on the other. Algebraic geometry meets analysis in unexpected ways.
-
----
-
-**Next: Functional Analysis** (infinite-dimensional linear algebra, Banach/Hilbert spaces, operators) or **Complex Analysis** (holomorphic functions, Riemann surfaces, where zeta lives more directly) or **Number Theory** (primes, zeta, arithmetic)?

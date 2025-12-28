@@ -37,7 +37,7 @@ Functional analysis exists because we need **infinite-dimensional linear algebra
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Normed space** | Vector space with norm ‖·‖ satisfying triangle inequality, scaling, positivity | (X, ‖·‖) |
 | **Banach space** | Complete normed space (Cauchy sequences converge) | X, Y, B |
 | **Inner product space** | Vector space with ⟨·,·⟩ satisfying linearity, conjugate symmetry, positivity | (H, ⟨·,·⟩) |
@@ -53,7 +53,7 @@ Functional analysis exists because we need **infinite-dimensional linear algebra
 **The key examples:**
 
 | Space | Elements | Norm | Complete? | Hilbert? |
-|-------|----------|------|-----------|----------|
+| ------- | ---------- | ------ | ----------- | ---------- |
 | ℓ^p | Sequences with Σ|xₙ|^p < ∞ | (Σ|xₙ|^p)^{1/p} | Yes | Only p=2 |
 | ℓ^∞ | Bounded sequences | sup|xₙ| | Yes | No |
 | L^p(μ) | Functions with ∫|f|^p dμ < ∞ | (∫|f|^p)^{1/p} | Yes | Only p=2 |
@@ -70,8 +70,8 @@ Functional analysis exists because we need **infinite-dimensional linear algebra
 
 **For spaces:**
 
-| Property | Meaning | Why it matters |
-|----------|---------|----------------|
+| Property | Meaning | Importance |
+| ---------- | --------- | ---------------- |
 | **Dimension** | Cardinality of a basis (Hamel or Schauder) | Infinite for all interesting cases |
 | **Separability** | Has countable dense subset | ℓ², L² are separable; ℓ^∞ isn't |
 | **Reflexivity** | X ≅ X** naturally | Lets you use weak compactness |
@@ -80,7 +80,7 @@ Functional analysis exists because we need **infinite-dimensional linear algebra
 **For operators:**
 
 | Property | Meaning | Notation |
-|----------|---------|----------|
+| ---------- | --------- | ---------- |
 | **Norm** | Size of operator | ‖T‖ |
 | **Spectrum** | Where resolvent fails | σ(T) |
 | **Spectral radius** | sup{|λ| : λ ∈ σ(T)} = lim ‖Tⁿ‖^{1/n} | r(T) |
@@ -91,7 +91,7 @@ Functional analysis exists because we need **infinite-dimensional linear algebra
 **The spectrum decomposes:**
 
 | Part | Condition |
-|------|-----------|
+| ------ | ----------- |
 | **Point spectrum σ_p** | λ is eigenvalue: ker(T-λI) ≠ {0} |
 | **Continuous spectrum σ_c** | (T-λI) injective, dense range, not surjective |
 | **Residual spectrum σ_r** | (T-λI) injective, range not dense |
@@ -111,7 +111,7 @@ For self-adjoint operators on Hilbert space: σ_r = ∅, and there's a spectral 
 **1. Riesz Representation Theorem (Hilbert space version)**
 > *Every bounded linear functional φ on a Hilbert space H has the form φ(x) = ⟨x, y⟩ for a unique y ∈ H.*
 
-**Why it matters:** The dual of a Hilbert space is itself (via the inner product). This is why Hilbert spaces are "self-dual" and so much nicer than general Banach spaces. It's the foundation for:
+**Importance:** The dual of a Hilbert space is itself (via the inner product). This is why Hilbert spaces are "self-dual" and so much nicer than general Banach spaces. It's the foundation for:
 - Defining adjoints: ⟨Tx, y⟩ = ⟨x, T*y⟩
 - Orthogonal projections
 - The "bra-ket" notation of quantum mechanics
@@ -119,7 +119,7 @@ For self-adjoint operators on Hilbert space: σ_r = ∅, and there's a spectral 
 **2. Hahn-Banach Theorem**
 > *A bounded linear functional on a subspace extends to the whole space with the same norm.*
 
-**Why it matters:** This is the existence theorem for functionals. It guarantees:
+**Importance:** This is the existence theorem for functionals. It guarantees:
 - The dual space is "big enough"
 - Separation of points (x ≠ y implies some functional separates them)
 - The whole duality theory that makes Banach space geometry work
@@ -129,7 +129,7 @@ For self-adjoint operators on Hilbert space: σ_r = ∅, and there's a spectral 
 **3. Uniform Boundedness Principle (Banach-Steinhaus)**
 > *If a family of bounded operators {Tₐ} satisfies sup_α ‖Tₐx‖ < ∞ for each x, then sup_α ‖Tₐ‖ < ∞.*
 
-**Why it matters:** Pointwise boundedness implies uniform boundedness. This is how you prove:
+**Importance:** Pointwise boundedness implies uniform boundedness. This is how you prove:
 - Fourier series converge (where they do)
 - Limits of operators are operators
 - "Resonance" arguments in PDE
@@ -139,14 +139,14 @@ For self-adjoint operators on Hilbert space: σ_r = ∅, and there's a spectral 
 
 **Corollary (Bounded Inverse Theorem):** A bounded bijection has a bounded inverse.
 
-**Why it matters:** You don't have to check that T⁻¹ is bounded—it's automatic from bijectivity and boundedness of T. This is deeply non-obvious and fails without completeness.
+**Importance:** You don't have to check that T⁻¹ is bounded—it's automatic from bijectivity and boundedness of T. This is deeply non-obvious and fails without completeness.
 
 **5. Spectral Theorem (Self-Adjoint Operators on Hilbert Space)**
 > *Every bounded self-adjoint operator T has a spectral decomposition:*
 > $$T = \int_{\sigma(T)} \lambda \, dE(\lambda)$$
 > *where E is a projection-valued measure.*
 
-**Why it matters:** This generalizes diagonalization to infinite dimensions. Even without eigenvectors, you have spectral projections. For each Borel set S, E(S) projects onto the "part of the space with spectrum in S."
+**Importance:** This generalizes diagonalization to infinite dimensions. Even without eigenvectors, you have spectral projections. For each Borel set S, E(S) projects onto the "part of the space with spectrum in S."
 
 For compact self-adjoint operators: the classical picture returns—there's an orthonormal basis of eigenvectors with eigenvalues accumulating only at 0.
 
@@ -155,14 +155,14 @@ For compact self-adjoint operators: the classical picture returns—there's an o
 > - *Has a unique solution for every y, or*
 > - *Has solutions for y ⊥ ker(I - K*), with solution unique up to ker(I - K)*
 
-**Why it matters:** This is "either-or" for integral equations. If the homogeneous equation has only the zero solution, the inhomogeneous one is always solvable. If not, solvability depends on orthogonality conditions. It's the infinite-dimensional Fredholm theory.
+**Importance:** This is "either-or" for integral equations. If the homogeneous equation has only the zero solution, the inhomogeneous one is always solvable. If not, solvability depends on orthogonality conditions. It's the infinite-dimensional Fredholm theory.
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Quantum Mechanics** | States are unit vectors in Hilbert space. Observables are self-adjoint operators. Measurement outcomes are spectral values. Time evolution is unitary. Functional analysis IS the math of QM. |
 | **PDEs** | Solutions live in Sobolev spaces (L² with derivatives). Weak solutions, variational methods, semigroups of operators. Existence/uniqueness via fixed-point theorems. |
 | **Spectral Theory** | We covered this—spectrum of operators, spectral measures, functional calculus. Now you see the context: operators on Banach/Hilbert spaces. |
@@ -227,7 +227,7 @@ PDEs become ODEs in infinite-dimensional space.
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | ‖x‖ | Norm of x |
 | ⟨x, y⟩ | Inner product |
 | B(X,Y) or ℒ(X,Y) | Bounded linear operators X → Y |
@@ -257,7 +257,7 @@ PDEs become ODEs in infinite-dimensional space.
 **Common operator classes:**
 
 | Class | Definition | Spectrum |
-|-------|------------|----------|
+| ------- | ------------ | ---------- |
 | **Self-adjoint** | T* = T | Real, spectral theorem applies |
 | **Normal** | T*T = TT* | Spectral theorem applies |
 | **Unitary** | T*T = TT* = I | On unit circle |
@@ -309,7 +309,7 @@ For each |λ| < 1, eigenvector x = (1, λ, λ², ...) works.
 
 For |λ| = 1: neither S - λI nor S* - λ̄I is surjective. This is continuous spectrum.
 
-**Why this matters:**
+**Importance:**
 
 The shift is the simplest non-normal operator. It shows:
 - Spectrum can be much larger than eigenvalues
@@ -338,9 +338,9 @@ The shift is the simplest non-normal operator. It shows:
 
 **Via Fourier transform:**
 
-$$\widehat{Δf}(ξ) = -|ξ|²\hat{f}(ξ)$$
+$$\widehat{Δf}(ξ) = - |ξ|²\hat{f}(ξ)$$
 
-So Δ is unitarily equivalent to multiplication by -|ξ|². The spectrum is the range of this function: (-∞, 0].
+So Δ is unitarily equivalent to multiplication by - |ξ|². The spectrum is the range of this function: (-∞, 0].
 
 For -Δ: spectrum is [0, ∞). Every λ ≥ 0 is in the continuous spectrum.
 
@@ -350,7 +350,7 @@ On Ω ⊂ ℝⁿ with boundary conditions, -Δ has discrete spectrum: eigenvalue
 
 Eigenfunctions are the "modes" of the drum. Weyl's law gives asymptotics.
 
-**Why this matters:** 
+**Importance:** 
 
 - Heat equation: u_t = Δu solves as u(t) = e^{tΔ}u₀. The spectrum controls decay.
 - Wave equation: u_{tt} = Δu. Eigenvalues give frequencies.
@@ -384,7 +384,7 @@ The RKHS is infinite-dimensional, contains very smooth functions, and enables:
 - Gaussian processes
 - Kernel PCA
 
-**Why this matters:**
+**Importance:**
 
 The "kernel trick" embeds data into infinite-dimensional RKHS where linear methods apply, but you only ever compute K(xᵢ,xⱼ)—never the explicit embedding.
 

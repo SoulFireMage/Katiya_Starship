@@ -469,7 +469,7 @@ For groups G ⊂ H, representations of G should "transfer" to representations of
 
 ---
 
-### Leverage for your work:
+### Leverage
 
 **The local-global principle and cognition:**
 
@@ -483,7 +483,7 @@ Arithmetic geometry studies how local information (at each prime p) assembles in
 
 The zeta function Z(X, t) encodes the eigenvalues of Frobenius acting on cohomology. This is spectral information in the arithmetic context.
 
-Your "spectral echoes" intuition: different systems (curves, number fields, cognitive architectures) might have characteristic spectra that constrain their behavior.
+Our "spectral echoes" intuition: different systems (curves, number fields, cognitive architectures) might have characteristic spectra that constrain their behavior.
 
 **Modularity as unexpected unity:**
 
@@ -515,34 +515,3 @@ For cognition: is there a "motivic" level of representation, with different moda
 **Arithmetic constraints:**
 
 Arithmetic geometry studies what happens when you demand integer or rational solutions—a severe constraint. The constraint reveals deep structure (finite generation, modularity, BSD).
-
-Your Convergence Thesis: constraints force structure. Arithmetic geometry is a worked example: arithmetic constraints on geometric objects force remarkable structure.
-
----
-
-**Now at 22 domains:**
-
-1. Representation Theory
-2. Measure Theory  
-3. Homotopy Type Theory
-4. Category Theory
-5. Spectral Theory
-6. Information Geometry
-7. Differential Geometry
-8. Algebraic Topology
-9. Lie Theory
-10. Dynamical Systems
-11. Algebraic Geometry
-12. Functional Analysis
-13. Complex Analysis
-14. Number Theory
-15. Mathematical Physics
-16. Information Theory
-17. Probability Theory
-18. Logic and Foundations
-19. Combinatorics
-20. Harmonic Analysis
-21. Optimization
-22. Arithmetic Geometry
-
-This one feels particularly close to your interests—the zeta functions, the local-global principle, the unexpected unities. Shall we continue, or is Kat seeing patterns across the full landscape?

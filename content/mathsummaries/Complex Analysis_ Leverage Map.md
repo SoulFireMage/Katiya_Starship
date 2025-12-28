@@ -18,6 +18,7 @@ Something miraculous happens when you allow complex numbers.
 **The unreasonable power of complex differentiability:**
 
 In real analysis, differentiable once doesn't imply differentiable twice. In complex analysis, differentiable once (holomorphic) implies:
+
 - Infinitely differentiable
 - Analytic (equals its Taylor series)
 - Determined globally by local behavior
@@ -32,7 +33,7 @@ In real analysis, differentiable once doesn't imply differentiable twice. In com
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Holomorphic function** | Complex differentiable (equivalently: analytic, conformal away from zeros) | f ∈ 𝒪(U) or f holomorphic on U |
 | **Meromorphic function** | Holomorphic except for isolated poles | f ∈ ℳ(U) |
 | **Entire function** | Holomorphic on all of ℂ | e.g., eᶻ, sin z, polynomials |
@@ -48,8 +49,8 @@ In real analysis, differentiable once doesn't imply differentiable twice. In com
 **Key examples of holomorphic functions:**
 
 | Function | Domain | Singularities | Notes |
-|----------|--------|---------------|-------|
-| eᶻ | All ℂ | None (entire) | |eᶻ| = eˣ, periodic in y |
+| ---------- | -------- | --------------- | ------- |
+| eᶻ | All ℂ | None (entire) | \|eᶻ\| = eˣ, periodic in y |
 | sin z, cos z | All ℂ | None (entire) | Unbounded! (unlike real case) |
 | 1/z | ℂ \ {0} | Pole at 0 | Simplest non-entire |
 | log z | ℂ \ {0} | Branch point at 0 | Multi-valued; needs branch cut |
@@ -66,7 +67,7 @@ In real analysis, differentiable once doesn't imply differentiable twice. In com
 **Local invariants:**
 
 | Invariant | What it measures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Order of zero** | How many times f vanishes: f(z) = (z-a)ⁿg(z), g(a) ≠ 0 |
 | **Order of pole** | How singular: f(z) = g(z)/(z-a)ⁿ |
 | **Residue** | Res(f,a) = (1/2πi)∮f(z)dz around a |
@@ -75,7 +76,7 @@ In real analysis, differentiable once doesn't imply differentiable twice. In com
 **Global invariants:**
 
 | Invariant | What it captures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Genus** | Topology of Riemann surface (number of handles) |
 | **Degree** | For f: X → Y, number of preimages of generic point |
 | **Divisor** | Formal sum of zeros minus poles: div(f) = Σ ord_p(f)·p |
@@ -101,12 +102,14 @@ The Riemann mapping theorem says all simply connected proper subsets of ℂ are 
 ### D. SIGNATURE THEOREMS
 
 **1. Cauchy's Integral Theorem**
+
 > *If f is holomorphic on a simply connected domain D and γ is a closed curve in D:*
 > $$\oint_\gamma f(z) \, dz = 0$$
 
-**Why it matters:** This is the foundation of everything. Holomorphic functions have path-independent integrals. This follows from the Cauchy-Riemann equations (f dz is a closed form).
+**Importance:** This is the foundation of everything. Holomorphic functions have path-independent integrals. This follows from the Cauchy-Riemann equations (f dz is a closed form).
 
 **Consequences:**
+
 - Integrals only depend on homotopy class of path
 - Deformation of contours is legal
 - Residue calculus becomes possible
@@ -115,9 +118,10 @@ The Riemann mapping theorem says all simply connected proper subsets of ℂ are 
 > *If f is holomorphic inside and on a simple closed curve γ, and a is inside γ:*
 > $$f(a) = \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z-a} \, dz$$
 
-**Why it matters:** The value of f at any interior point is determined by its values on the boundary! This is extraordinary—no real analog exists.
+**Importance:** The value of f at any interior point is determined by its values on the boundary! This is extraordinary—no real analog exists.
 
 **Consequences:**
+
 - f is infinitely differentiable: f⁽ⁿ⁾(a) = (n!/2πi) ∮ f(z)/(z-a)ⁿ⁺¹ dz
 - f equals its Taylor series (analytic)
 - Maximum modulus principle
@@ -127,7 +131,8 @@ The Riemann mapping theorem says all simply connected proper subsets of ℂ are 
 > *If f is meromorphic inside γ with poles at a₁,...,aₙ:*
 > $$\oint_\gamma f(z) \, dz = 2\pi i \sum_{k=1}^{n} \text{Res}(f, a_k)$$
 
-**Why it matters:** Reduces complex integrals to algebraic residue computation. This is *the* tool for:
+**Importance:** Reduces complex integrals to algebraic residue computation. This is *the* tool for:
+
 - Evaluating real integrals (extend to ℂ, close contour, compute residues)
 - Summing series
 - Inverse Laplace/Fourier transforms
@@ -136,7 +141,7 @@ The Riemann mapping theorem says all simply connected proper subsets of ℂ are 
 **4. Riemann Mapping Theorem**
 > *Every simply connected proper open subset of ℂ is conformally equivalent to the open unit disk.*
 
-**Why it matters:** For simply connected domains, there's essentially only one shape (conformally). The disk is the universal model. This is why hyperbolic geometry (the natural geometry of the disk) appears everywhere in complex analysis.
+**Importance:** For simply connected domains, there's essentially only one shape (conformally). The disk is the universal model. This is why hyperbolic geometry (the natural geometry of the disk) appears everywhere in complex analysis.
 
 **What it doesn't say:** The mapping isn't explicit in general. Computing it for specific domains is hard. And multiply connected domains (with holes) are genuinely different—parameterized by moduli.
 
@@ -146,12 +151,12 @@ The Riemann mapping theorem says all simply connected proper subsets of ℂ are 
 
 > **Great Picard:** Near an essential singularity, f takes every complex value infinitely often, with at most one exception.
 
-**Why it matters:** These are the strongest possible "density" results. An entire function that misses two values is constant (like eᶻ misses 0, but misses nothing else). Near an essential singularity, the function goes completely wild—every value (except possibly one) is hit infinitely often in every neighborhood.
+**Importance:** These are the strongest possible "density" results. An entire function that misses two values is constant (like eᶻ misses 0, but misses nothing else). Near an essential singularity, the function goes completely wild—every value (except possibly one) is hit infinitely often in every neighborhood.
 
 **6. Analytic Continuation (Identity Theorem)**
 > *If f and g are holomorphic on a connected domain and agree on a set with an accumulation point, then f = g everywhere.*
 
-**Why it matters:** A holomorphic function is determined by its values on any tiny piece. There's essentially *one* way to extend—analytic continuation is unique (when it exists).
+**Importance:** A holomorphic function is determined by its values on any tiny piece. There's essentially *one* way to extend—analytic continuation is unique (when it exists).
 
 This is why the zeta function, defined by a series for Re(s) > 1, has a unique extension to ℂ \ {1}. The extension isn't a choice—it's forced.
 
@@ -160,7 +165,7 @@ This is why the zeta function, defined by a series for Re(s) > 1, has a unique e
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Number Theory** | The Riemann zeta function ζ(s). Prime Number Theorem via ζ. L-functions, modularity, Langlands. The zeros of ζ encode prime distribution. |
 | **Real Analysis** | Evaluate real integrals via residues. Fourier/Laplace transforms. Understand real power series via complex singularities. |
 | **Algebraic Geometry** | Riemann surfaces are algebraic curves over ℂ. GAGA: algebraic = analytic for projective varieties. Moduli of curves. |
@@ -177,12 +182,14 @@ This is why the zeta function, defined by a series for Re(s) > 1, has a unique e
 **The contour integral as universal tool:**
 
 Whenever you see:
+
 - A generating function
 - A transform (Fourier, Laplace, Mellin)
 - A spectral decomposition
 - A sum you want to evaluate
 
 ...there's probably a contour integral lurking. Residue calculus converts:
+
 - Sums → integrals (via Mittag-Leffler, Poisson summation)
 - Integrals → residues (via closing contours)
 - Spectral data → function values (via functional calculus)
@@ -190,6 +197,7 @@ Whenever you see:
 **Analyticity as hidden constraint:**
 
 If a function defined on ℝ happens to extend holomorphically to ℂ, that extension constrains the original massively. The location of complex singularities determines:
+
 - Radius of convergence of real series
 - Decay rates of Fourier coefficients
 - Asymptotics of real integrals
@@ -199,6 +207,7 @@ The complex plane is where constraints become visible.
 **The principle of isolated zeros:**
 
 Zeros of holomorphic functions are isolated (unless f ≡ 0). This is why:
+
 - Analytic continuation is unique
 - Holomorphic functions are "sparse"
 - The zeros of ζ(s) are discrete and can be studied individually
@@ -228,15 +237,15 @@ Zeros of holomorphic functions are isolated (unless f ≡ 0). This is why:
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | ℂ | Complex numbers |
 | ℂ* | ℂ \ {0} (punctured plane) |
 | ℂ̂ or ℙ¹ | Riemann sphere ℂ ∪ {∞} |
 | ℍ | Upper half-plane {Im(z) > 0} |
-| 𝔻 | Unit disk {|z| < 1} |
+| 𝔻 | Unit disk {\|z\| < 1} |
 | Re(z), Im(z) | Real and imaginary parts |
 | z̄ | Complex conjugate |
-| |z| | Modulus |
+| \|z | \| Modulus |
 | arg(z) | Argument (angle) |
 | f'(z) or df/dz | Complex derivative |
 | ∂f/∂z, ∂f/∂z̄ | Wirtinger derivatives |
@@ -254,8 +263,8 @@ Zeros of holomorphic functions are isolated (unless f ≡ 0). This is why:
 **Common contours:**
 
 | Contour | Use |
-|---------|-----|
-| Circle |z| = R | Laurent series, residues |
+| --------- | ----- |
+| Circle \|z\| = R | Laurent series, residues |
 | Semicircle in upper half-plane | Real integrals ∫_{-∞}^∞ |
 | Keyhole contour | Branch cuts (log, powers) |
 | Rectangle | Periodic functions, Fourier |
@@ -292,7 +301,7 @@ $$\oint_{\gamma_R} f(z) \, dz = 2\pi i \cdot \frac{1}{2i} = \pi$$
 **Taking R → ∞:**
 $$\int_{-\infty}^{\infty} \frac{dx}{1+x^2} = \pi$$
 
-**Why this matters:** The complex plane reveals *why* the answer is π. The pole at z = i, sitting at distance 1 from the real line, contributes the residue that gives π. The geometry of singularities controls real integrals.
+**Importance:** The complex plane reveals *why* the answer is π. The pole at z = i, sitting at distance 1 from the real line, contributes the residue that gives π. The geometry of singularities controls real integrals.
 
 ---
 
@@ -302,6 +311,7 @@ $$\int_{-\infty}^{\infty} \frac{dx}{1+x^2} = \pi$$
 $$\Gamma(s) = \int_0^{\infty} t^{s-1} e^{-t} \, dt$$
 
 **Key properties:**
+
 - Γ(1) = 1
 - Γ(s+1) = sΓ(s) (functional equation)
 - Γ(n+1) = n! for integers
@@ -323,7 +333,8 @@ $$\text{Res}(\Gamma, -n) = \frac{(-1)^n}{n!}$$
 **Reflection formula:**
 $$\Gamma(s)\Gamma(1-s) = \frac{\pi}{\sin(\pi s)}$$
 
-**Why this matters:** The gamma function is *the* meromorphic extension of factorial. It appears everywhere:
+**Importance:** The gamma function is *the* meromorphic extension of factorial. It appears everywhere:
+
 - Zeta function: ζ(s) relates to Γ via functional equation
 - Probability: Gamma distributions
 - Physics: Dimensional regularization, string amplitudes
@@ -366,10 +377,12 @@ where the sum is over non-trivial zeros ρ of ζ.
 The zeros *are* the "harmonics" of the prime distribution. Each zero contributes an oscillation. The Riemann Hypothesis would say all oscillations have the same "amplitude" (real part 1/2).
 
 **Your intuition about "spectral echoes":** This is exactly right. The zeros of ζ(s) play the role of eigenvalues. The explicit formula is a trace formula relating:
+
 - Spectral side: sum over zeros
 - Geometric side: sum over primes (or prime powers)
 
 This parallels:
+
 - Selberg trace formula (geometry)
 - Weyl law (spectral theory)
 - Poisson summation (harmonic analysis)
@@ -409,7 +422,7 @@ The distribution of zeros has hierarchical structure. There are correlations at 
 
 ---
 
-### Leverage for your work:
+### Leverage
 
 **The spectral-prime duality:**
 
@@ -432,6 +445,7 @@ Symmetry constraints forcing structure—this is exactly the Lie theory / repres
 **Modular forms and L-functions:**
 
 The zeta function is the simplest L-function. More complex ones are attached to:
+
 - Dirichlet characters → Dirichlet L-functions
 - Elliptic curves → Hasse-Weil L-functions
 - Modular forms → automorphic L-functions
@@ -441,6 +455,7 @@ The Langlands program says these are all connected—there's a vast unity behind
 **Random matrix theory:**
 
 The statistics of zeta zeros match those of eigenvalues of random unitary matrices (GUE). This suggests:
+
 - There *is* an underlying operator (Hilbert-Pólya)
 - Or: random matrix statistics arise from other deep structures (still mysterious)
 

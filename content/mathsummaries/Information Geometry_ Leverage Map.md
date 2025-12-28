@@ -21,7 +21,7 @@ Information geometry exists because **probability distributions have intrinsic g
 
 **The core move:** A parametric family of distributions {p(x|θ)} isn't just a set—it's a *manifold* where θ are coordinates. The Fisher information defines distances. KL divergence defines a kind of directed "distance." Exponential families have beautiful flat structure. Inference becomes geometry.
 
-**Why it matters beyond elegance:**
+**Importance beyond elegance:**
 - The geometry explains *why* certain estimators are optimal
 - Natural gradient descent (using the Fisher metric) dramatically improves learning
 - The geometry reveals dualities hidden in statistics
@@ -32,7 +32,7 @@ Information geometry exists because **probability distributions have intrinsic g
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Statistical manifold** | A manifold M where each point is a probability distribution | M, S, or {p_θ} |
 | **Fisher information matrix** | The metric tensor: how much information θ carries about x | I(θ) or g_ij(θ) |
 | **Fisher-Rao metric** | The Riemannian metric induced by Fisher information | ds² = Σ g_ij dθⁱdθʲ |
@@ -65,7 +65,7 @@ $$I(\theta)_{ij} = -\mathbb{E}\left[\frac{\partial^2 \log p(x|\theta)}{\partial 
 **The divergences:**
 
 | Divergence | Formula | Properties |
-|------------|---------|------------|
+| ------------ | --------- | ------------ |
 | KL divergence | D(p‖q) = ∫ p log(p/q) | Not symmetric, not a metric. Measures "surprise" of q when truth is p. |
 | Reverse KL | D(q‖p) = ∫ q log(q/p) | Mode-seeking vs mean-seeking behavior |
 | α-divergence | (4/(1-α²))(1 - ∫ p^((1+α)/2) q^((1-α)/2)) | α=1 → KL, α=-1 → reverse KL, α=0 → Hellinger |
@@ -86,12 +86,12 @@ $$I(\theta)_{ij} = -\mathbb{E}\left[\frac{\partial^2 \log p(x|\theta)}{\partial 
 
 **Geometric meaning:** You can't estimate better than the "curvature" of the likelihood allows. The Fisher information is literally the precision limit imposed by the data.
 
-**Why it matters:** This is *the* fundamental limit of inference. It explains why some parameters are easy to estimate (high Fisher information) and others hard (low). Maximum likelihood estimators achieve this bound asymptotically—they're geometrically optimal.
+**Importance:** This is *the* fundamental limit of inference. It explains why some parameters are easy to estimate (high Fisher information) and others hard (low). Maximum likelihood estimators achieve this bound asymptotically—they're geometrically optimal.
 
 **2. Fisher-Rao Metric Uniqueness (Čencov's Theorem)**
 > *The Fisher-Rao metric is (up to scale) the unique Riemannian metric on statistical manifolds that is invariant under sufficient statistics / Markov morphisms.*
 
-**Why it matters:** The Fisher metric isn't an arbitrary choice—it's *forced* by requiring that the geometry respects statistical structure. Coarse-graining (marginalization, noise) shouldn't change intrinsic geometric quantities. Only Fisher-Rao satisfies this.
+**Importance:** The Fisher metric isn't an arbitrary choice—it's *forced* by requiring that the geometry respects statistical structure. Coarse-graining (marginalization, noise) shouldn't change intrinsic geometric quantities. Only Fisher-Rao satisfies this.
 
 This is like how the Euclidean metric is forced by requiring rotation/translation invariance. The Fisher metric is forced by requiring "statistical invariance."
 
@@ -101,7 +101,7 @@ This is like how the Euclidean metric is forced by requiring rotation/translatio
 > *- η-coordinates (expectation parameters) are flat under the m-connection (∇^(-1))*
 > *These are Legendre dual: η = ∇ψ(θ) and θ = ∇φ(η), where ψ and φ are convex conjugates.*
 
-**Why it matters:** 
+**Importance:** 
 
 In θ-coordinates, the exponential family is a flat space—straight lines in θ are geodesics of the e-connection.
 
@@ -117,7 +117,7 @@ The two flatnesses are dual via Legendre transform. This underlies:
 > *For points p, q, r in a dually flat space, if the e-geodesic from r to q is orthogonal to the m-geodesic from q to p:*
 > *D(r‖p) = D(r‖q) + D(q‖p)*
 
-**Why it matters:** This is why projections minimize divergence. It's the geometric foundation of:
+**Importance:** This is why projections minimize divergence. It's the geometric foundation of:
 - Maximum likelihood (project data onto model manifold)
 - Maximum entropy (project prior onto constraint surface)  
 - Variational inference (project true posterior onto tractable family)
@@ -127,7 +127,7 @@ The two flatnesses are dual via Legendre transform. This underlies:
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Machine Learning** | Natural gradient descent uses Fisher metric—invariant to parameterization. Adam, K-FAC approximate this. Loss landscape geometry is information geometry. |
 | **Neural Networks** | Weight space has Fisher structure. Natural gradient = steepest descent in distribution space, not weight space. Information matrix ≈ Hessian near optimum. |
 | **Variational Inference** | VI minimizes KL(q‖p). This is m-projection onto the variational family. ELBO maximization is geometric. |
@@ -175,7 +175,7 @@ Whenever you're optimizing over distributions, you're doing geometry—usually i
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | p_θ or p(x\|θ) | Distribution parameterized by θ |
 | I(θ) or g_ij | Fisher information matrix |
 | D(p‖q), D_KL(p‖q) | KL divergence from q to p (note: conventions vary!) |
@@ -256,7 +256,7 @@ $$\eta = \mathbb{E}[X] = \pi = \frac{e^\theta}{1+e^\theta} = \text{sigmoid}(\the
 
 Given data with empirical mean x̄, the MLE is the distribution with η = x̄. This is the m-projection of the empirical distribution onto the model manifold.
 
-**Why this matters:**
+**Importance:**
 - The sigmoid appears *because* of the Legendre structure
 - Neural network outputs (logits) are natural parameters; sigmoid converts to probabilities
 - Softmax is the multivariate version—same geometry

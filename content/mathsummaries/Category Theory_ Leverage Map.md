@@ -245,7 +245,7 @@ Hom_**Grp**(F(S), G) ≅ Hom_**Set**(S, U(G))
 
 ---
 
-### Leverage for your work:
+### Leverage
 
 **Pattern-linking formalized:** When you see two structures as "the same kind of thing," you're implicitly constructing a functor. When you see a correspondence that "works systematically," that's a natural transformation. Category theory is the language your pattern-linking already uses—it just makes it explicit.
 

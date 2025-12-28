@@ -16,7 +16,7 @@ Uncertainty demanded a calculus.
 **The philosophical problem:** What *is* probability? 
 
 | Interpretation | Probability means... |
-|----------------|----------------------|
+| ---------------- | ---------------------- |
 | **Frequentist** | Long-run relative frequency |
 | **Bayesian** | Degree of belief, updated by evidence |
 | **Propensity** | Physical tendency to produce outcomes |
@@ -46,7 +46,7 @@ This axiomatic approach unified all interpretations under one mathematical frame
 **The foundational objects:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Sample space** | All possible outcomes | Ω |
 | **σ-algebra / Event space** | Collection of measurable subsets | ℱ |
 | **Probability measure** | P: ℱ → [0,1] with P(Ω) = 1 | P |
@@ -61,7 +61,7 @@ This axiomatic approach unified all interpretations under one mathematical frame
 **The zoo of distributions:**
 
 | Distribution | Notation | Use case |
-|--------------|----------|----------|
+| -------------- | ---------- | ---------- |
 | Bernoulli | Ber(p) | Single coin flip |
 | Binomial | Bin(n,p) | Count of successes in n trials |
 | Poisson | Poi(λ) | Rare events, counts |
@@ -77,7 +77,7 @@ This axiomatic approach unified all interpretations under one mathematical frame
 **Stochastic processes:**
 
 | Process | What it is | Key property |
-|---------|-----------|--------------|
+| --------- | ----------- | -------------- |
 | **i.i.d. sequence** | X₁, X₂, ... independent, same distribution | Simplest case |
 | **Markov chain** | Future depends only on present | P(Xₙ₊₁\|X₁,...,Xₙ) = P(Xₙ₊₁\|Xₙ) |
 | **Martingale** | "Fair game"—conditional expectation is current value | 𝔼[Xₙ₊₁\|X₁,...,Xₙ] = Xₙ |
@@ -96,7 +96,7 @@ Functions of random variables. If X has distribution μ and g is measurable, the
 **Moments:**
 
 | Moment | Definition | What it captures |
-|--------|------------|------------------|
+| -------- | ------------ | ------------------ |
 | Mean | 𝔼[X] | Center / location |
 | Variance | 𝔼[(X-μ)²] | Spread / scale |
 | Skewness | 𝔼[(X-μ)³]/σ³ | Asymmetry |
@@ -131,7 +131,7 @@ Cumulants κₙ = K^{(n)}(0) are often more natural than moments.
 **For stochastic processes:**
 
 | Invariant | What it captures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | Stationary distribution | Long-run behavior |
 | Transition probabilities | Dynamics |
 | Hitting times | When process reaches a set |
@@ -159,7 +159,7 @@ Cumulants κₙ = K^{(n)}(0) are often more natural than moments.
 > $$\bar{X}_n \xrightarrow{a.s.} \mu$$
 > (almost sure convergence)
 
-**Why it matters:** Averages converge to expectations. This justifies:
+**Importance:** Averages converge to expectations. This justifies:
 - Frequentist interpretation of probability
 - Monte Carlo methods
 - Statistical estimation
@@ -171,7 +171,7 @@ The strong law says the convergence happens for almost every sequence of outcome
 > *For i.i.d. X₁, X₂, ... with mean μ and variance σ²:*
 > $$\frac{\bar{X}_n - \mu}{\sigma/\sqrt{n}} \xrightarrow{d} N(0,1)$$
 
-**Why it matters:** Sums of independent random variables become Gaussian, regardless of the original distribution. This explains:
+**Importance:** Sums of independent random variables become Gaussian, regardless of the original distribution. This explains:
 - Why Gaussians are everywhere (measurement error = sum of small errors)
 - Why the normal distribution is "normal"
 - Statistical inference (confidence intervals, hypothesis tests)
@@ -182,7 +182,7 @@ The strong law says the convergence happens for almost every sequence of outcome
 
 > *Given consistent finite-dimensional distributions, there exists a stochastic process with those distributions.*
 
-**Why it matters:** This is how you construct stochastic processes. Specify what (X_{t₁}, ..., X_{tₙ}) looks like for all finite collections of times; the theorem gives you the whole process on a suitable probability space.
+**Importance:** This is how you construct stochastic processes. Specify what (X_{t₁}, ..., X_{tₙ}) looks like for all finite collections of times; the theorem gives you the whole process on a suitable probability space.
 
 **The consistency condition:** Marginalizing over some coordinates gives the distribution for the remaining coordinates.
 
@@ -190,7 +190,7 @@ The strong law says the convergence happens for almost every sequence of outcome
 
 > *A martingale bounded in L¹ converges almost surely.*
 
-**Why it matters:** Martingales—"fair games"—have strong convergence properties. This theorem underlies:
+**Importance:** Martingales—"fair games"—have strong convergence properties. This theorem underlies:
 - Doob's optional stopping theorem
 - Martingale methods in analysis
 - Stochastic optimization convergence proofs
@@ -199,7 +199,7 @@ The strong law says the convergence happens for almost every sequence of outcome
 
 > *If M is a martingale and τ is a stopping time (with certain conditions), then 𝔼[M_τ] = 𝔼[M_0].*
 
-**Why it matters:** You can't beat a fair game by clever stopping rules. The expected value at a stopping time equals the initial value. This has applications in:
+**Importance:** You can't beat a fair game by clever stopping rules. The expected value at a stopping time equals the initial value. This has applications in:
 - Gambling (you can't win long-term)
 - Finance (fair pricing of options)
 - Algorithm analysis (expected running time)
@@ -209,7 +209,7 @@ The strong law says the convergence happens for almost every sequence of outcome
 > *For an ergodic stationary process:*
 > $$\frac{1}{n}\sum_{i=1}^n f(X_i) \xrightarrow{a.s.} \mathbb{E}[f(X)]$$
 
-**Why it matters:** Time averages equal space (ensemble) averages. This connects:
+**Importance:** Time averages equal space (ensemble) averages. This connects:
 - Dynamical systems (time evolution)
 - Statistical mechanics (ensemble averages)
 - Markov chain Monte Carlo (sampling by running the chain)
@@ -219,7 +219,7 @@ The strong law says the convergence happens for almost every sequence of outcome
 > **First:** If ΣP(Aₙ) < ∞, then P(lim sup Aₙ) = 0.
 > **Second:** If Aₙ are independent and ΣP(Aₙ) = ∞, then P(lim sup Aₙ) = 1.
 
-**Why it matters:** "lim sup Aₙ" = "infinitely many Aₙ occur." The lemmas say:
+**Importance:** "lim sup Aₙ" = "infinitely many Aₙ occur." The lemmas say:
 - Finite sum of probabilities → only finitely many occur (a.s.)
 - Infinite sum + independence → infinitely many occur (a.s.)
 
@@ -230,7 +230,7 @@ This is the workhorse for proving "almost sure" statements.
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Measure Theory** | Probability IS measure theory with P(Ω) = 1. Random variables are measurable functions. Expectations are Lebesgue integrals. |
 | **Information Theory** | Entropy H(X) = -𝔼[log p(X)]. Mutual information, KL divergence. Typical sequences, AEP. |
 | **Functional Analysis** | Random variables form L^p spaces. Characteristic functions are Fourier transforms. Conditional expectation is orthogonal projection. |
@@ -272,7 +272,7 @@ In algorithms: potential function arguments.
 High-dimensional probability is dominated by concentration: most of the mass is near the typical value.
 
 | Inequality | Statement |
-|------------|-----------|
+| ------------ | ----------- |
 | Markov | P(X ≥ a) ≤ 𝔼[X]/a |
 | Chebyshev | P(\|X-μ\| ≥ a) ≤ σ²/a² |
 | Chernoff | P(X ≥ a) ≤ inf_t e^{-ta} M_X(t) |
@@ -306,7 +306,7 @@ These control deviations from typical behavior. In high dimensions, concentratio
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | Ω | Sample space |
 | ℱ, 𝒢 | σ-algebras (event spaces) |
 | P | Probability measure |
@@ -397,7 +397,7 @@ $$W^{(n)} \xrightarrow{d} W$$
 
 where W is standard Brownian motion. The random walk converges (in distribution on path space) to Brownian motion!
 
-**Why this matters:**
+**Importance:**
 
 The random walk is the discrete prototype for:
 - Brownian motion (continuous limit)
@@ -434,7 +434,7 @@ $$\mathbb{E}[\mathbb{E}[X|\mathcal{G}]] = \mathbb{E}[X]$$
 
 $$\mathbb{E}[\mathbb{E}[X|\mathcal{H}]|\mathcal{G}] = \mathbb{E}[X|\mathcal{G}] \quad \text{if } \mathcal{G} \subseteq \mathcal{H}$$
 
-**Why this matters:**
+**Importance:**
 
 Conditional expectation is:
 - The foundation of martingale theory (𝔼[Xₙ₊₁|ℱₙ] = Xₙ defines martingale)
@@ -481,7 +481,7 @@ for interarrival time T ~ Exp(λ). The process "doesn't remember" when the last 
 
 **Conditioning:** Given N(t) = n, the arrival times are uniform on [0,t] (order statistics).
 
-**Why this matters:**
+**Importance:**
 
 The Poisson process models:
 - Customer arrivals

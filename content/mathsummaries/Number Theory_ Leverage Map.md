@@ -21,7 +21,7 @@ The integers are the simplest infinite structure—yet they hide infinite depth.
 **The two souls of number theory:**
 
 | Branch | Method | Flavor |
-|--------|--------|--------|
+| -------- | -------- | -------- |
 | **Algebraic** | Extend ℤ to rings of integers, use ideal theory, Galois groups | Structural, algebraic |
 | **Analytic** | Use complex analysis, L-functions, asymptotics | Continuous, analytical |
 
@@ -29,7 +29,7 @@ The miracle: these approaches illuminate each other. The distribution of primes 
 
 **The core move:** Primes are the atoms; understanding their distribution is understanding multiplication. The zeta function encodes prime information analytically. Algebraic extensions of ℚ encode arithmetic structure. The interplay between algebra, analysis, and geometry is number theory's essence.
 
-**Why this matters:**
+**Importance:**
 - **Cryptography:** RSA, elliptic curves, lattices—modern security is number theory
 - **Coding theory:** Algebraic codes from number fields
 - **Physics:** Quantum chaos ↔ zeta zeros, string theory ↔ modular forms
@@ -42,7 +42,7 @@ The miracle: these approaches illuminate each other. The distribution of primes 
 **The basic hierarchy:**
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Natural numbers** | {1, 2, 3, ...} | ℕ |
 | **Integers** | {..., -2, -1, 0, 1, 2, ...} | ℤ |
 | **Rationals** | Fractions a/b | ℚ |
@@ -58,7 +58,7 @@ The miracle: these approaches illuminate each other. The distribution of primes 
 **Fundamental extensions:**
 
 | Field | Defining property | Example elements |
-|-------|-------------------|------------------|
+| ------- | ------------------- | ------------------ |
 | ℚ(√2) | Adjoin √2 | a + b√2 |
 | ℚ(i) | Gaussian rationals | a + bi |
 | ℚ(ζₙ) | Cyclotomic field, ζₙ = e^{2πi/n} | Roots of unity |
@@ -67,7 +67,7 @@ The miracle: these approaches illuminate each other. The distribution of primes 
 **The rings of integers:**
 
 | Field K | Ring 𝒪_K | UFD? |
-|---------|----------|------|
+| --------- | ---------- | ------ |
 | ℚ | ℤ | Yes |
 | ℚ(i) | ℤ[i] = {a+bi} | Yes |
 | ℚ(√-5) | ℤ[√-5] | **No!** (6 = 2·3 = (1+√-5)(1-√-5)) |
@@ -87,7 +87,7 @@ The miracle: these approaches illuminate each other. The distribution of primes 
 **For primes:**
 
 | Invariant | What it measures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Prime counting function π(x)** | Number of primes ≤ x |
 | **Prime density** | π(x) ~ x/ln(x) (Prime Number Theorem) |
 | **Gaps between primes** | pₙ₊₁ - pₙ (subtle, varies wildly) |
@@ -96,7 +96,7 @@ The miracle: these approaches illuminate each other. The distribution of primes 
 **For number fields K:**
 
 | Invariant | What it captures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Degree [K:ℚ]** | Dimension as ℚ-vector space |
 | **Discriminant Δ_K** | Measures "ramification," size of 𝒪_K |
 | **Class number h_K** | Size of ideal class group; h=1 ⟺ UFD |
@@ -107,7 +107,7 @@ The miracle: these approaches illuminate each other. The distribution of primes 
 **For ideals:**
 
 | Invariant | Meaning |
-|-----------|---------|
+| ----------- | --------- |
 | **Norm N(𝔭)** | Size of residue field 𝒪_K/𝔭 |
 | **Decomposition type** | How a rational prime splits in 𝒪_K |
 | **Frobenius element** | Galois element associated to prime |
@@ -129,7 +129,7 @@ This relates analytic (ζ_K) to algebraic (h_K, R_K, Δ_K) invariants. One formu
 **1. Fundamental Theorem of Arithmetic**
 > *Every integer n > 1 factors uniquely (up to order) into primes.*
 
-**Why it matters:** This is the foundation. Primes are the atoms. The theorem is so natural it seems obvious—but it *fails* in other rings (like ℤ[√-5]), which is why it's profound.
+**Importance:** This is the foundation. Primes are the atoms. The theorem is so natural it seems obvious—but it *fails* in other rings (like ℤ[√-5]), which is why it's profound.
 
 The failure of unique factorization in general number rings drove the development of ideal theory (Kummer, Dedekind).
 
@@ -137,7 +137,7 @@ The failure of unique factorization in general number rings drove the developmen
 > $$\pi(x) \sim \frac{x}{\ln x}$$
 > *Equivalently: the n-th prime pₙ ~ n ln n.*
 
-**Why it matters:** Primes thin out logarithmically but never stop. The theorem quantifies how.
+**Importance:** Primes thin out logarithmically but never stop. The theorem quantifies how.
 
 **Proved via zeta:** The key is showing ζ(s) ≠ 0 on the line Re(s) = 1. The zeros of ζ control the error term:
 - Riemann Hypothesis ⟹ π(x) = Li(x) + O(√x log x)
@@ -147,7 +147,7 @@ The failure of unique factorization in general number rings drove the developmen
 > *If gcd(a, q) = 1, there are infinitely many primes p ≡ a (mod q).*
 > *Moreover, they have density 1/φ(q) among all primes.*
 
-**Why it matters:** Primes are "equidistributed" among residue classes. There's no bias (asymptotically) toward any particular remainder.
+**Importance:** Primes are "equidistributed" among residue classes. There's no bias (asymptotically) toward any particular remainder.
 
 **Proved via L-functions:** Dirichlet introduced L(s, χ) = Σ χ(n)n⁻ˢ for characters χ. The non-vanishing L(1, χ) ≠ 0 (for χ ≠ 1) is the key.
 
@@ -156,14 +156,14 @@ The failure of unique factorization in general number rings drove the developmen
 > $$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2}\frac{q-1}{2}}$$
 > *where (p/q) is the Legendre symbol: +1 if p is a square mod q, -1 otherwise.*
 
-**Why it matters:** Whether p is a square mod q depends (almost) only on whether q is a square mod p! This symmetry is miraculous and was Gauss's favorite theorem (he gave six proofs).
+**Importance:** Whether p is a square mod q depends (almost) only on whether q is a square mod p! This symmetry is miraculous and was Gauss's favorite theorem (he gave six proofs).
 
 **Generalizations:** Cubic, quartic, higher reciprocity laws. Artin reciprocity (class field theory) is the ultimate generalization—it describes all abelian extensions of a number field.
 
 **5. Fermat's Last Theorem (Wiles, 1995)**
 > *For n ≥ 3, there are no positive integer solutions to xⁿ + yⁿ = zⁿ.*
 
-**Why it matters:** The problem is elementary to state but required:
+**Importance:** The problem is elementary to state but required:
 - Elliptic curves (the Frey curve)
 - Modular forms (modularity conjecture)
 - Galois representations
@@ -173,14 +173,14 @@ The proof showed that every (semistable) elliptic curve over ℚ is modular—a 
 **6. Unique Factorization of Ideals (Dedekind)**
 > *In the ring of integers 𝒪_K of any number field K, every nonzero ideal factors uniquely into prime ideals.*
 
-**Why it matters:** This rescues unique factorization at the level of ideals, even when elements don't factor uniquely. It's why ideals are fundamental.
+**Importance:** This rescues unique factorization at the level of ideals, even when elements don't factor uniquely. It's why ideals are fundamental.
 
 **Consequence:** The class group Cl(K) measures the failure of unique factorization for elements. Cl(K) = {1} ⟺ 𝒪_K is a UFD.
 
 **7. Chebotarev Density Theorem**
 > *For a Galois extension L/K and conjugacy class C in Gal(L/K), the density of primes 𝔭 in K whose Frobenius lies in C equals |C|/|G|.*
 
-**Why it matters:** Primes split according to Galois structure. The theorem generalizes both:
+**Importance:** Primes split according to Galois structure. The theorem generalizes both:
 - Dirichlet (abelian case)
 - Prime decomposition patterns in extensions
 
@@ -191,7 +191,7 @@ This is the bridge between Galois theory and prime distribution.
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **Complex Analysis** | Zeta and L-functions. Prime Number Theorem via ζ(s). Analytic continuation, functional equations, zero distribution. |
 | **Algebraic Geometry** | Arithmetic geometry: varieties over ℚ, ℤ, 𝔽_p. Weil conjectures. Elliptic curves. Fermat's Last Theorem. |
 | **Representation Theory** | Galois representations. Artin L-functions. Langlands program: automorphic forms ↔ Galois representations. |
@@ -258,7 +258,7 @@ The Langlands philosophy: these are all the same thing, viewed differently!
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | ℤ, ℚ, ℝ, ℂ | Integers, rationals, reals, complex |
 | 𝔽_p or ℤ/pℤ | Field with p elements |
 | 𝔽_q | Field with q = p^n elements |
@@ -290,7 +290,7 @@ The Langlands philosophy: these are all the same thing, viewed differently!
 **Key functions:**
 
 | Function | Definition | Role |
-|----------|------------|------|
+| ---------- | ------------ | ------ |
 | **φ(n)** | #{1 ≤ k ≤ n : gcd(k,n) = 1} | Counts coprime residues |
 | **μ(n)** | (-1)^k if n = p₁...pₖ distinct primes, 0 if p² \| n | Möbius inversion |
 | **Λ(n)** | log p if n = p^k, else 0 | Von Mangoldt, smooths primes |
@@ -316,7 +316,7 @@ A Gaussian integer π is prime if: whenever π | αβ, then π | α or π | β.
 **How rational primes factor in ℤ[i]:**
 
 | p in ℤ | Behavior in ℤ[i] | Example |
-|--------|------------------|---------|
+| -------- | ------------------ | --------- |
 | p = 2 | Ramifies: 2 = -i(1+i)² | N(1+i) = 2 |
 | p ≡ 1 (mod 4) | Splits: p = ππ̄ | 5 = (2+i)(2-i) |
 | p ≡ 3 (mod 4) | Stays prime | 3 is still prime in ℤ[i] |
@@ -337,7 +337,7 @@ So 13 = (2 + 3i)(2 - 3i).
 
 Check: (2 + 3i)(2 - 3i) = 4 + 9 = 13. ✓
 
-**Why this matters:** This is the simplest case of the general pattern: how primes in ℤ factor in extensions is controlled by arithmetic conditions and Galois theory.
+**Importance:** This is the simplest case of the general pattern: how primes in ℤ factor in extensions is controlled by arithmetic conditions and Galois theory.
 
 ---
 
@@ -369,7 +369,7 @@ where the sum is over non-trivial zeros ρ of ζ(s).
 
 **Without RH:** We know Re(ρ) < 1, but how close to 1 can zeros get? The zero-free region determines the error term. Current best: Re(ρ) < 1 - c/(log|Im(ρ)|)^{2/3}.
 
-**Why this matters:**
+**Importance:**
 
 The Prime Number Theorem says primes thin out like 1/ln x. But the zeros of ζ(s) control the fluctuations around this average. Each zero contributes an oscillation. RH would say all oscillations have the same "frequency" (real part 1/2).
 
@@ -409,7 +409,7 @@ So 𝔭₂ has order 2 in the class group.
 
 **Result:** Cl(ℚ(√-5)) ≅ ℤ/2ℤ, so h = 2.
 
-**Why this matters:**
+**Importance:**
 
 The class number measures the failure of unique factorization. For ℚ(√-5), h = 2 means ideals split into two classes: principal and non-principal. The non-principal ideals square to principal ones.
 
@@ -428,7 +428,7 @@ Since you're interested in deep connections, here's the meta-pattern:
 **The players:**
 
 | Side | Objects |
-|------|---------|
+| ------ | --------- |
 | **Galois** | Galois representations ρ: Gal(Q̄/ℚ) → GL_n(ℂ) |
 | **Automorphic** | Automorphic forms/representations on GL_n(𝔸_ℚ) |
 

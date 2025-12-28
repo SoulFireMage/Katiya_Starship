@@ -32,7 +32,7 @@ Differential geometry exists because **we need calculus on curved spaces**, and 
 ### B. CORE OBJECTS & MORPHISMS
 
 | Object | What it is | Notation |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | **Manifold** | A space that locally looks like ℝⁿ (has charts/coordinates) | M, N, X |
 | **Chart / Coordinate system** | A local homeomorphism φ: U → ℝⁿ | (U, φ) or xⁱ for coordinate functions |
 | **Tangent vector** | An "infinitesimal arrow" at a point; a derivation on functions | v ∈ T_pM |
@@ -48,6 +48,7 @@ Differential geometry exists because **we need calculus on curved spaces**, and 
 | **Geodesic** | A curve with zero acceleration; "straightest possible" path | γ with ∇_γ̇ γ̇ = 0 |
 
 **Morphisms:** Smooth maps f: M → N. Special cases:
+
 - **Diffeomorphism:** Smooth with smooth inverse (isomorphism of manifolds)
 - **Isometry:** Preserves the metric (isomorphism of Riemannian manifolds)
 - **Immersion/Embedding:** How one manifold sits inside another
@@ -66,7 +67,7 @@ The revolution: some properties depend on how a surface is embedded (extrinsic),
 **Curvature hierarchy:**
 
 | Curvature | What it measures | Tensor rank |
-|-----------|------------------|-------------|
+| ----------- | ------------------ | ------------- |
 | **Riemann tensor R** | Full curvature information—how vectors rotate under parallel transport around infinitesimal loops | (1,3) tensor |
 | **Ricci tensor Ric** | Average curvature in each direction—trace of Riemann | (0,2) tensor |
 | **Scalar curvature R** | Single number—total average curvature at a point—trace of Ricci | Scalar |
@@ -77,7 +78,7 @@ The revolution: some properties depend on how a surface is embedded (extrinsic),
 **Topological invariants (global):**
 
 | Invariant | What it captures |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Euler characteristic χ** | "Vertices - edges + faces" generalized. χ(sphere) = 2, χ(torus) = 0 |
 | **Genus g** | Number of "handles." Sphere g=0, torus g=1 |
 | **Betti numbers bₖ** | Dimensions of homology groups—counts of k-dimensional "holes" |
@@ -96,36 +97,37 @@ Total curvature is determined by topology alone!
 **1. Gauss's Theorema Egregium**
 > *Gaussian curvature is intrinsic: it depends only on the metric, not on how the surface is embedded.*
 
-**Why it matters:** This is the founding theorem. It says you can do geometry without an ambient space. The curvature is "in" the surface itself. This made Riemannian geometry possible and eventually led to general relativity.
+**Importance:** This is the founding theorem. It says you can do geometry without an ambient space. The curvature is "in" the surface itself. This made Riemannian geometry possible and eventually led to general relativity.
 
 **Concrete consequence:** You cannot flatten an orange peel without tearing or stretching. The sphere has positive curvature; flat paper has zero curvature. No isometry between them exists.
 
 **2. Gauss-Bonnet Theorem**
-> *For a closed surface M:*
-> $$\int_M K \, dA = 2\pi \chi(M)$$
+ *For a closed surface M:*
+ $$\int_M K \, dA = 2\pi \chi(M)$$
 
-**Why it matters:** Local geometry (curvature at each point) integrates to give global topology (Euler characteristic). You can deform a surface however you like—the total curvature is conserved (as long as you don't change topology).
+**Importance:** Local geometry (curvature at each point) integrates to give global topology (Euler characteristic). You can deform a surface however you like—the total curvature is conserved (as long as you don't change topology).
 
 **Deep version:** Generalizes to higher dimensions as the Chern-Gauss-Bonnet theorem, connecting curvature to Euler characteristic via the Pfaffian of the curvature form. This is a special case of the Atiyah-Singer index theorem.
 
 **3. The Fundamental Theorem of Riemannian Geometry**
-> *On any Riemannian manifold, there exists a unique connection (the Levi-Civita connection) that is:*
-> *1. Compatible with the metric: ∇g = 0*
-> *2. Torsion-free: ∇_X Y - ∇_Y X = [X,Y]*
 
-**Why it matters:** There's a canonical way to parallel transport, differentiate vector fields, and define geodesics. You don't have to choose a connection—the metric determines it. This is why Riemannian geometry is so rigid and powerful.
+*On any Riemannian manifold, there exists a unique connection (the Levi-Civita connection) that is:*
+*1. Compatible with the metric: ∇g = 0*
+*2. Torsion-free: ∇_X Y - ∇_Y X = [X,Y]*
+
+**Importance:** There's a canonical way to parallel transport, differentiate vector fields, and define geodesics. You don't have to choose a connection—the metric determines it. This is why Riemannian geometry is so rigid and powerful.
 
 **4. Geodesics as Shortest Paths (locally)**
-> *Geodesics (curves with ∇_γ̇ γ̇ = 0) locally minimize length.*
+*Geodesics (curves with ∇_γ̇ γ̇ = 0) locally minimize length.*
 
-**Why it matters:** "Straightest" (zero acceleration) and "shortest" coincide—but only locally. Globally, geodesics might not be shortest (think of going the long way around a sphere). The geodesic equation is a second-order ODE determined entirely by the metric.
+**Importance:** "Straightest" (zero acceleration) and "shortest" coincide—but only locally. Globally, geodesics might not be shortest (think of going the long way around a sphere). The geodesic equation is a second-order ODE determined entirely by the metric.
 
 ---
 
 ### E. BRIDGES TO OTHER DOMAINS
 
 | Domain | Connection |
-|--------|------------|
+| -------- | ------------ |
 | **General Relativity** | Spacetime is a Lorentzian manifold. Gravity = curvature. Einstein equation: Ric - ½Rg = 8πT (curvature ↔ matter). Geodesics = free-fall trajectories. |
 | **Information Geometry** | Statistical manifolds are Riemannian with Fisher metric. The geometry you just learned is built on this foundation. |
 | **Gauge Theory** | Connections on principal bundles generalize Levi-Civita connection. Curvature = field strength. Electromagnetism, Yang-Mills, Standard Model are all differential geometry. |
@@ -170,7 +172,7 @@ The **connection** is the key unifying concept:
 ### G. NOTATION SURVIVAL KIT
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | M, N | Manifolds |
 | T_pM | Tangent space at p |
 | TM | Tangent bundle |
@@ -196,6 +198,7 @@ The **connection** is the key unifying concept:
 | γ̇ | Velocity of curve γ (tangent vector) |
 
 **Index gymnastics:**
+
 - Lower indices = covariant (transform like basis vectors)
 - Upper indices = contravariant (transform like coordinates)
 - Einstein summation: repeated upper-lower index pairs are summed
@@ -217,6 +220,7 @@ So: g_θθ = R², g_φφ = R²sin²θ, g_θφ = 0.
 **Christoffel symbols:** (computed from Γⁱ_jk = ½g^{il}(∂_j g_{kl} + ∂_k g_{jl} - ∂_l g_{jk}))
 
 Non-zero ones:
+
 - Γ^θ_φφ = -sinθ cosθ
 - Γ^φ_θφ = Γ^φ_φθ = cotθ
 
@@ -225,6 +229,7 @@ $$\ddot{\theta} - \sin\theta\cos\theta \, \dot{\phi}^2 = 0$$
 $$\ddot{\phi} + 2\cot\theta \, \dot{\theta}\dot{\phi} = 0$$
 
 **Solutions:** Great circles. Not obvious from the equations, but:
+
 - Lines of constant φ (meridians) are geodesics
 - The equator (θ = π/2) is a geodesic
 - Tilted great circles satisfy both equations
@@ -238,6 +243,7 @@ $$\ddot{\phi} + 2\cot\theta \, \dot{\theta}\dot{\phi} = 0$$
 **Micro-example 2: Parallel transport on the sphere**
 
 **Setup:** Start at the North pole with a vector pointing toward longitude φ = 0. Parallel transport it:
+
 1. Down to the equator along a meridian
 2. Along the equator to longitude φ = π/2
 3. Back up to the North pole along that meridian
@@ -257,6 +263,7 @@ $$\ddot{\phi} + 2\cot\theta \, \dot{\theta}\dot{\phi} = 0$$
 **Geometric deep learning:**
 
 Features on a manifold live in tangent spaces. A convolutional filter must be defined *relative to a frame*—but there's no canonical frame on a curved manifold! Solutions:
+
 - Use connection to parallel transport filters
 - Work with frame bundles and gauge equivariance  
 - Design architectures respecting the geometry
