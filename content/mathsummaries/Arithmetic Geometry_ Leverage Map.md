@@ -1,7 +1,7 @@
 ---
 title: "Arithmetic Geometry: Leverage Map"
 date: 2025-12-28
-draft: true
+draft: false
 tags: ["mathematics", "arithmetic-geometry", "leverage-map"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Singular Value Decomposition & Principal Component Analysis"
 date: 2025-12-28
-draft: true
+draft: false
 tags: ["mathematics", "linear-algebra", "SVD", "PCA", "leverage-map"]
 ---
 

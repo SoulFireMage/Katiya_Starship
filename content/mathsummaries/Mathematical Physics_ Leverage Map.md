@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Physics: Leverage Map"
 date: 2025-12-28
-draft: true
+draft: false
 tags: ["mathematics", "mathematical-physics", "leverage-map"]
 ---
 

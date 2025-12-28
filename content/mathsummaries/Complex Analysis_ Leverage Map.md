@@ -1,7 +1,7 @@
 ---
 title: "Complex Analysis: Leverage Map"
 date: 2025-12-28
-draft: true
+draft: false
 tags: ["mathematics", "complex-analysis", "leverage-map"]
 ---
 
